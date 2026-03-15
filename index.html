@@ -1567,7 +1567,7 @@ Respond ONLY with a JSON object in this exact format, no preamble, no markdown:
 {"scores":{"task":0,"structure":0,"content":0,"vocabulary":0,"language":0,"length":0},"total":0,"percent":0,"grade_label":"Good","strengths":["strength 1","strength 2"],"improvements":["tip 1","tip 2"],"strengths_he":["חוזקה 1","חוזקה 2"],"improvements_he":["טיפ 1","טיפ 2"],"overall_comment":"comment in English","overall_comment_he":"הערה בעברית"}`;
 
   try {
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${geminiKey}`;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${geminiKey}`;
     const response = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

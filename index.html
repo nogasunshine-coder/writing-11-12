@@ -1134,31 +1134,7 @@
 <!-- ══════════════ AI GRADER ══════════════ -->
 <div id="aigrade" class="section">
 
-  <div class="card" id="api-key-card" style="border:2px solid #f39c12; background:linear-gradient(135deg,#fffbf0,#fef5e7);">
-    <div class="card-title" style="color:#e67e22; font-size:1.2rem;">
-      <div class="emoji-badge">🔑</div>
-      Enter the Class API Key | הכניסו את מפתח ה-API של הכיתה
-    </div>
-    <p style="line-height:1.7; margin-bottom:10px; font-size:0.95rem;">
-      Your teacher gave you a key that looks like this: <strong style="font-family:monospace; background:#f8f9fa; padding:2px 8px; border-radius:4px;">AIzaSy...</strong>
-    </p>
-    <span class="he" style="margin-bottom:14px; display:block;">המורה נתן לכם מפתח — הכניסו אותו כאן פעם אחת.</span>
-    <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
-      <input type="password" id="api-key-input" placeholder="Paste your key here..."
-        style="flex:1; min-width:200px; padding:11px 16px; border:2px solid #f39c12; border-radius:50px; font-family:'Nunito',sans-serif; font-size:0.95rem; outline:none;"
-        onkeydown="if(event.key==='Enter') saveKey()">
-      <button onclick="saveKey()"
-        style="padding:11px 24px; background:#e67e22; color:white; border:none; border-radius:50px; font-family:'Nunito',sans-serif; font-weight:800; font-size:0.95rem; cursor:pointer; white-space:nowrap;">
-        ✅ Save Key | שמור
-      </button>
-    </div>
-    <div id="key-status" style="margin-top:10px; font-size:0.88rem; font-weight:700;"></div>
-    <p style="margin-top:12px; font-size:0.78rem; color:#95a5a6; line-height:1.6;">
-      🔒 Saved only in your browser for this session. | נשמר רק בדפדפן שלכם לסשן זה.
-    </p>
-  </div>
-
-  <div id="grader-main" style="display:none;">
+  <div id="grader-main">
     <div class="card">
       <div class="card-title" style="color:#0f3460">
         <div class="emoji-badge">🤖</div>
@@ -1209,10 +1185,7 @@
           style="padding:13px 30px; background:linear-gradient(135deg,#1a1a2e,#0f3460); color:white; border:none; border-radius:50px; font-family:'Nunito',sans-serif; font-weight:800; font-size:1rem; cursor:pointer; transition:all 0.25s;">
           🤖 Grade My Essay! | בדקו את החיבור שלי!
         </button>
-        <button onclick="clearKey()"
-          style="padding:11px 18px; background:white; border:2px solid #bdc3c7; color:#7f8c8d; border-radius:50px; font-family:'Nunito',sans-serif; font-weight:700; font-size:0.85rem; cursor:pointer;">
-          🔑 Change key | החלף מפתח
-        </button>
+
       </div>
     </div>
 
@@ -1422,35 +1395,13 @@ function updateChecklist() {
 }
 buildChecklist();
 
-// ── API Key management
-let geminiKey = localStorage.getItem('gemini_key') || '';
-if (geminiKey) showGrader();
-
-function saveKey() {
-  const val = document.getElementById('api-key-input').value.trim();
-  if (!val || val.length < 20) {
-    document.getElementById('key-status').innerHTML = '<span style="color:#c0392b;">⚠️ The key looks too short. Please check it. | המפתח נראה קצר מדי.</span>';
-    return;
-  }
-  geminiKey = val;
-  try { localStorage.setItem('gemini_key', val); } catch(e) {}
-  showGrader();
-}
-
-function showGrader() {
-  document.getElementById('api-key-card').style.display = 'none';
-  document.getElementById('grader-main').style.display = 'block';
-}
-
-function clearKey() {
-  geminiKey = '';
-  try { localStorage.removeItem('gemini_key'); } catch(e) {}
-  document.getElementById('api-key-input').value = '';
-  document.getElementById('key-status').innerHTML = '';
-  document.getElementById('api-key-card').style.display = 'block';
-  document.getElementById('grader-main').style.display = 'none';
-  document.getElementById('ai-results').style.display = 'none';
-}
+// ── OpenRouter config (hardcoded — no key input needed)
+const OR_KEY = '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';
+const OR_MODELS = [
+  'meta-llama/llama-3.1-8b-instruct:free',
+  'mistralai/mistral-7b-instruct:free',
+  'google/gemma-2-9b-it:free'
+];
 
 // ── Topics per type (senior level)
 const topics = {
@@ -1529,7 +1480,7 @@ function setTopic(i) {
   setTimeout(() => document.getElementById('step-write').scrollIntoView({ behavior:'smooth', block:'start' }), 100);
 }
 
-// ── Grade with Gemini
+// ── Grade with OpenRouter
 async function gradeWithAI() {
   const text = document.getElementById('ai-input').value.trim();
   if (!text || text.split(/\s+/).length < 30) {
@@ -1538,7 +1489,6 @@ async function gradeWithAI() {
   }
   if (!chosenType) { alert('Please choose a text type! | בחרו סוג טקסט!'); return; }
   if (!chosenTopic) { alert('Please choose a topic! | בחרו נושא!'); return; }
-  if (!geminiKey) { clearKey(); return; }
 
   document.getElementById('ai-loading').style.display = 'block';
   document.getElementById('ai-results').style.display = 'none';
@@ -1567,35 +1517,37 @@ Respond ONLY with a JSON object in this exact format, no preamble, no markdown:
 {"scores":{"task":0,"structure":0,"content":0,"vocabulary":0,"language":0,"length":0},"total":0,"percent":0,"grade_label":"Good","strengths":["strength 1","strength 2"],"improvements":["tip 1","tip 2"],"strengths_he":["חוזקה 1","חוזקה 2"],"improvements_he":["טיפ 1","טיפ 2"],"overall_comment":"comment in English","overall_comment_he":"הערה בעברית"}`;
 
   try {
-    const models = ['gemini-2.0-flash', 'gemini-1.5-flash', 'gemini-1.5-pro'];
-  let response, lastErr;
-  for (const model of models) {
+    let response, lastErr;
+  for (const model of OR_MODELS) {
     try {
-      const url = `https://generativelanguage.googleapis.com/v1/models/${model}:generateContent?key=${geminiKey}`;
-      response = await fetch(url, {
+      response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + OR_KEY,
+          'HTTP-Referer': window.location.href,
+          'X-Title': 'English Writing Grader'
+        },
         body: JSON.stringify({
-          contents: [{ parts: [{ text: prompt }] }],
-          generationConfig: { temperature: 0.3, maxOutputTokens: 1200 }
+          model: model,
+          messages: [{ role: 'user', content: prompt }],
+          temperature: 0.3,
+          max_tokens: 1200
         })
       });
-      if (response.status === 404 || response.status === 429) { lastErr = `Model ${model} unavailable (${response.status})`; continue; }
+      if (response.status === 429 || response.status === 503) { lastErr = `Model ${model} unavailable`; continue; }
       break;
     } catch(e) { lastErr = e.message; }
   }
   if (!response) throw new Error(lastErr || 'All models failed');
 
-    if (response.status === 400 || response.status === 403) {
-      const errData = await response.json();
+    if (!response.ok) {
+      const errData = await response.json().catch(() => ({}));
       throw new Error('api_error:' + response.status + ':' + JSON.stringify(errData));
     }
 
     const data = await response.json();
-    if (!data.candidates || data.candidates.length === 0) {
-      throw new Error('no_candidates:' + JSON.stringify(data));
-    }
-    const raw = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+    const raw = data.choices?.[0]?.message?.content || '';
     const clean = raw.replace(/```json|```/g, '').trim();
     const result = JSON.parse(clean);
     showResults(result, text);
@@ -1619,7 +1571,7 @@ Respond ONLY with a JSON object in this exact format, no preamble, no markdown:
         <div style="font-size:0.78rem; background:#fff; padding:10px; border-radius:8px; font-family:monospace; word-break:break-all; color:#555;">
           🔍 Error details: ${errorDetails}
         </div>
-        ${isKeyError ? '<button onclick="clearKey()" style="margin-top:10px; padding:9px 20px; background:#c0392b; color:white; border:none; border-radius:50px; font-family:Nunito,sans-serif; font-weight:800; cursor:pointer;">🔑 Enter new key</button>' : ''}
+
       </div>`;
     document.getElementById('ai-results').scrollIntoView({ behavior:'smooth', block:'start' });
   }

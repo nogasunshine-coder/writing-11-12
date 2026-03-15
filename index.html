@@ -1395,14 +1395,6 @@ function updateChecklist() {
 }
 buildChecklist();
 
-// ── OpenRouter config (hardcoded — no key input needed)
-const OR_KEY = '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';
-const OR_MODELS = [
-  'meta-llama/llama-3.1-8b-instruct:free',
-  'mistralai/mistral-7b-instruct:free',
-  'google/gemma-2-9b-it:free'
-];
-
 // ── Topics per type (senior level)
 const topics = {
   descriptive: [
@@ -1480,11 +1472,11 @@ function setTopic(i) {
   setTimeout(() => document.getElementById('step-write').scrollIntoView({ behavior:'smooth', block:'start' }), 100);
 }
 
-// ── Grade with OpenRouter
-async function gradeWithAI() {
+// ── Smart JS Grader (no API needed)
+function gradeWithAI() {
   const text = document.getElementById('ai-input').value.trim();
-  if (!text || text.split(/\s+/).length < 30) {
-    alert('Please write at least 30 words first! | כתבו לפחות 30 מילים!');
+  if (!text || text.split(/\s+/).length < 20) {
+    alert('Please write at least 20 words first! | כתבו לפחות 20 מילים!');
     return;
   }
   if (!chosenType) { alert('Please choose a text type! | בחרו סוג טקסט!'); return; }
@@ -1494,88 +1486,135 @@ async function gradeWithAI() {
   document.getElementById('ai-results').style.display = 'none';
   document.getElementById('grade-btn').disabled = true;
 
-  const typeLabel = chosenType === 'descriptive' ? 'descriptive (תיאורי)' : 'argumentative (טיעוני)';
-
-  const prompt = `You are an experienced English teacher in Israel grading an upper secondary school student (grades 11-12) writing task at Bagrut level.
-
-The student chose to write a ${typeLabel} essay on this topic: "${chosenTopic}"
-
-Grade the following student text using this Bagrut-level rubric (each criterion: 0–3 points):
-1. Task Achievement – Did the student fully and insightfully address the topic "${chosenTopic}" in a ${typeLabel} way? Are ideas developed (not just listed)?
-2. Coherence & Cohesion – Is there a clear multi-paragraph structure with topic sentences, academic opening/closing connectors, and logical flow?
-3. Content & Development – Are ideas original, well-supported by evidence/examples? (For argumentative: is there a counter-argument?)
-4. Vocabulary & Register – Is the vocabulary rich and varied? Is an academic register maintained? Are word choices precise?
-5. Language Accuracy – Grammar, spelling, punctuation, sentence variety. Are complex structures used?
-6. Length – Ideal is 150–220 words. Below 120 should receive 0–1.
-
-Student text:
-"""
-${text}
-"""
-
-Respond ONLY with a JSON object in this exact format, no preamble, no markdown:
-{"scores":{"task":0,"structure":0,"content":0,"vocabulary":0,"language":0,"length":0},"total":0,"percent":0,"grade_label":"Good","strengths":["strength 1","strength 2"],"improvements":["tip 1","tip 2"],"strengths_he":["חוזקה 1","חוזקה 2"],"improvements_he":["טיפ 1","טיפ 2"],"overall_comment":"comment in English","overall_comment_he":"הערה בעברית"}`;
-
-  try {
-    let response, lastErr;
-  for (const model of OR_MODELS) {
+  setTimeout(() => {
     try {
-      response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer ' + OR_KEY,
-          'HTTP-Referer': window.location.href,
-          'X-Title': 'English Writing Grader'
-        },
-        body: JSON.stringify({
-          model: model,
-          messages: [{ role: 'user', content: prompt }],
-          temperature: 0.3,
-          max_tokens: 1200
-        })
-      });
-      if (response.status === 429 || response.status === 503) { lastErr = `Model ${model} unavailable`; continue; }
-      break;
-    } catch(e) { lastErr = e.message; }
-  }
-  if (!response) throw new Error(lastErr || 'All models failed');
-
-    if (!response.ok) {
-      const errData = await response.json().catch(() => ({}));
-      throw new Error('api_error:' + response.status + ':' + JSON.stringify(errData));
+      const result = analyzeEssay(text, chosenType, chosenTopic);
+      showResults(result, text);
+    } catch(e) {
+      document.getElementById('ai-loading').style.display = 'none';
+      document.getElementById('grade-btn').disabled = false;
+      alert('Error analyzing text. Please try again.');
     }
-
-    const data = await response.json();
-    const raw = data.choices?.[0]?.message?.content || '';
-    const clean = raw.replace(/```json|```/g, '').trim();
-    const result = JSON.parse(clean);
-    showResults(result, text);
-
-  } catch(err) {
-    document.getElementById('ai-loading').style.display = 'none';
-    document.getElementById('grade-btn').disabled = false;
-    document.getElementById('ai-results').style.display = 'block';
-    const isKeyError = err.message === 'invalid_key' || err.message.includes('403');
-    const errorDetails = err.message.replace('api_error:','').replace('no_candidates:','');
-    document.getElementById('ai-results').innerHTML = `
-      <div class="card" style="border:2px solid #f1948a; background:#fdf2f2;">
-        <div style="font-weight:800; color:#c0392b; margin-bottom:8px;">
-          ${isKeyError ? '🔑 Invalid API key | מפתח שגוי' : '⚠️ Connection error | שגיאת חיבור'}
-        </div>
-        <div style="font-size:0.92rem; margin-bottom:10px;">
-          ${isKeyError
-            ? 'The key is incorrect. Ask your teacher. | המפתח שגוי. בקשו מהמורה.'
-            : 'Could not reach the AI. Please try again. | לא ניתן להתחבר. נסו שוב.'}
-        </div>
-        <div style="font-size:0.78rem; background:#fff; padding:10px; border-radius:8px; font-family:monospace; word-break:break-all; color:#555;">
-          🔍 Error details: ${errorDetails}
-        </div>
-
-      </div>`;
-    document.getElementById('ai-results').scrollIntoView({ behavior:'smooth', block:'start' });
-  }
+  }, 800);
 }
+
+function analyzeEssay(text, type, topic) {
+  const words = text.trim().split(/\s+/);
+  const wc = words.length;
+  const lower = text.toLowerCase();
+  const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 3);
+
+  // ── 1. TASK ACHIEVEMENT
+  const topicWords = topic.toLowerCase().replace(/[?.,]/g,'').split(/\s+/).filter(w => w.length > 3);
+  const topicHits = topicWords.filter(w => lower.includes(w)).length;
+  const topicRatio = topicWords.length > 0 ? topicHits / topicWords.length : 0;
+  let taskScore = 0;
+  if (topicRatio >= 0.5 && wc >= 130) taskScore = 3;
+  else if (topicRatio >= 0.3 && wc >= 100) taskScore = 2;
+  else if (topicRatio >= 0.15 || wc >= 80) taskScore = 1;
+
+  // ── 2. COHERENCE & COHESION
+  const hasOpener = /although many people|it is a commonly held|when discussing|the phenomenon|recently,? we have|there are some factors|nowadays many|is a controversial|the issue of|in my opinion|personally,|as i see it|i have been asked/i.test(text);
+  const hasBodyConn = /first and foremost|to begin with|first,? it is|another point|a further|it is a well-known|research has shown|studies have proved|on the one hand|on the other hand|moreover|furthermore|in addition|additionally/i.test(text);
+  const hasConclusion = /to conclude|to sum up|all in all|in conclusion|all things considered|bearing this in mind|never have i been|it is about time|considering everything|finally,|in summary/i.test(text);
+  const paragraphs = text.split(/\n\s*\n/).filter(p => p.trim().length > 20);
+  const hasParagraphs = paragraphs.length >= 2 || (wc > 100 && sentences.length >= 4);
+  let cohScore = 0;
+  const cohChecks = [hasOpener, hasBodyConn, hasConclusion, hasParagraphs].filter(Boolean).length;
+  if (cohChecks >= 4) cohScore = 3;
+  else if (cohChecks >= 3) cohScore = 2;
+  else if (cohChecks >= 2) cohScore = 1;
+
+  // ── 3. CONTENT & DEVELOPMENT
+  const hasEvidence = /research has shown|studies have proved|it is a well-known fact|according to|statistics show|experts say|for example|for instance|such as|one example|a case in point/i.test(text);
+  const hasCounter = /opponents|proponents|however|nevertheless|despite this|on the other hand|admittedly|some may argue|critics claim|those who disagree/i.test(text);
+  const hasElaboration = sentences.filter(s => s.trim().split(/\s+/).length > 15).length >= 2;
+  const avgSentLen = wc / Math.max(sentences.length, 1);
+  let contentScore = 0;
+  const contentChecks = [hasEvidence, hasCounter || type==='descriptive', hasElaboration, wc >= 130].filter(Boolean).length;
+  if (contentChecks >= 4) contentScore = 3;
+  else if (contentChecks >= 3) contentScore = 2;
+  else if (contentChecks >= 2) contentScore = 1;
+
+  // ── 4. VOCABULARY & REGISTER
+  const academicWords = ['significant','essential','furthermore','moreover','consequently','nevertheless','fundamental','perspective','demonstrate','consider','examine','although','despite','therefore','whereas','regarding','concerning','evident','crucial','substantial','profound','extensive','apparent','acknowledge','emphasize','highlight','illustrate','indicate','suggest','reveal'];
+  const sophisticatedAdj = ['overwhelming','compelling','inevitable','controversial','remarkable','profound','sophisticated','ambiguous','complex','nuanced','prevalent','inherent'];
+  const academicCount = academicWords.filter(w => lower.includes(w)).length;
+  const sophisticatedCount = sophisticatedAdj.filter(w => lower.includes(w)).length;
+  // Check word variety (unique words / total)
+  const uniqueWords = new Set(words.map(w => w.toLowerCase().replace(/[^a-z]/g,''))).size;
+  const variety = uniqueWords / wc;
+  let vocabScore = 0;
+  if (academicCount >= 4 && variety > 0.65) vocabScore = 3;
+  else if (academicCount >= 2 && variety > 0.55) vocabScore = 2;
+  else if (academicCount >= 1 || variety > 0.5) vocabScore = 1;
+
+  // ── 5. LANGUAGE ACCURACY
+  // Heuristic: penalise very short sentences (fragments), reward variety
+  const shortSentences = sentences.filter(s => s.trim().split(/\s+/).length < 4).length;
+  const longSentences  = sentences.filter(s => s.trim().split(/\s+/).length > 20).length;
+  const hasComplexStructures = /although|whereas|despite|even though|not only.*but also|both.*and|neither.*nor|having said that|it is worth noting/i.test(text);
+  const repetitionFlag = (() => {
+    const freq = {};
+    words.forEach(w => { const c = w.toLowerCase().replace(/[^a-z]/g,''); if(c.length>4) freq[c]=(freq[c]||0)+1; });
+    return Object.values(freq).filter(v=>v>4).length > 3;
+  })();
+  let langScore = 0;
+  if (!repetitionFlag && hasComplexStructures && shortSentences < 3 && longSentences >= 1) langScore = 3;
+  else if (!repetitionFlag && (hasComplexStructures || shortSentences < 4)) langScore = 2;
+  else if (shortSentences < sentences.length * 0.5) langScore = 1;
+
+  // ── 6. LENGTH
+  let lengthScore = 0;
+  if (wc >= 150 && wc <= 230) lengthScore = 3;
+  else if (wc >= 120 && wc < 150) lengthScore = 2;
+  else if (wc >= 80) lengthScore = 1;
+
+  // ── TOTALS
+  const scores = { task: taskScore, structure: cohScore, content: contentScore, vocabulary: vocabScore, language: langScore, length: lengthScore };
+  const total = Object.values(scores).reduce((a,b)=>a+b,0);
+  const percent = Math.round((total/18)*100);
+
+  // ── GRADE LABEL
+  const grade_label = percent >= 90 ? 'Outstanding' : percent >= 80 ? 'Very Good' : percent >= 65 ? 'Good' : percent >= 50 ? 'Satisfactory' : 'Needs Work';
+
+  // ── STRENGTHS
+  const strengths = [], strengths_he = [];
+  if (taskScore >= 2)    { strengths.push('Your essay addresses the topic clearly and stays focused throughout.'); strengths_he.push('החיבור עונה על הנושא בבהירות ושומר על מיקוד לאורך כולו.'); }
+  if (cohScore >= 2)     { strengths.push('Good use of connectors and paragraph structure — the essay flows well.'); strengths_he.push('שימוש טוב במחברים ובמבנה פסקאות — החיבור זורם היטב.'); }
+  if (contentScore >= 2) { strengths.push('Ideas are developed and supported — not just listed.'); strengths_he.push('הרעיונות מפותחים ונתמכים — לא רק מפורטים.'); }
+  if (vocabScore >= 2)   { strengths.push('Vocabulary is varied and shows a good academic register.'); strengths_he.push('אוצר המילים מגוון ומראה שימוש ברמה אקדמית.'); }
+  if (langScore >= 2)    { strengths.push('Sentence structures are varied and mostly accurate.'); strengths_he.push('מבני המשפטים מגוונים ובדרך כלל מדויקים.'); }
+  if (lengthScore === 3) { strengths.push('Excellent length — fully meets the 150+ word requirement.'); strengths_he.push('אורך מצוין — עומד בדרישת 150+ מילים.'); }
+  if (strengths.length === 0) { strengths.push('A good first attempt — keep developing your ideas.'); strengths_he.push('ניסיון ראשון טוב — המשיכו לפתח את הרעיונות.'); }
+
+  // ── IMPROVEMENTS
+  const improvements = [], improvements_he = [];
+  if (taskScore < 2)    { improvements.push(`Make sure your essay clearly addresses the topic: "${topic}". Use key words from the topic throughout.`); improvements_he.push(`וודאו שהחיבור עונה ישירות על הנושא. השתמשו במילות מפתח מהנושא לאורך הכתיבה.`); }
+  if (!hasOpener)       { improvements.push('Start with a formal academic opener — e.g. "Although many people believe..." or "When discussing the issue of..."'); improvements_he.push('פתחו עם פתיחה אקדמית — למשל "Although many people believe..." או "When discussing the issue of..."'); }
+  if (!hasBodyConn)     { improvements.push('Use body connectors: "First and foremost..." / "Another point that should be taken into consideration..."'); improvements_he.push('הוסיפו מחברי גוף: "First and foremost..." / "Another point that should be taken into consideration..."'); }
+  if (!hasConclusion)   { improvements.push('Add a formal conclusion: "To sum up, as I have mentioned above, I am totally convinced that..."'); improvements_he.push('הוסיפו מסקנה פורמלית: "To sum up, as I have mentioned above, I am totally convinced that..."'); }
+  if (!hasEvidence && type === 'argumentative') { improvements.push('Support your arguments with evidence: "Research has shown..." / "Studies have proved..."'); improvements_he.push('תמכו את הטיעונים בראיות: "Research has shown..." / "Studies have proved..."'); }
+  if (!hasCounter && type === 'argumentative')  { improvements.push('Include a counter-argument: "Opponents of this view may argue that... However..."'); improvements_he.push('הוסיפו טיעון נגד: "Opponents of this view may argue that... However..."'); }
+  if (vocabScore < 2)   { improvements.push('Upgrade your vocabulary — replace simple words with more precise ones (e.g. "big" → "substantial", "good" → "beneficial").'); improvements_he.push('שדרגו את אוצר המילים — החליפו מילים פשוטות במדויקות יותר.'); }
+  if (lengthScore < 2)  { improvements.push(`Your essay is only ${wc} words — aim for at least 150 words to meet the requirement.`); improvements_he.push(`החיבור שלכם הוא רק ${wc} מילים — שאפו ל-150 מילים לפחות.`); }
+
+  // ── OVERALL COMMENT
+  const overall_comment = percent >= 80
+    ? `Strong essay! You demonstrate a good command of academic writing at this level. Focus on the suggestions above to push your grade even higher.`
+    : percent >= 60
+    ? `A solid attempt with some good elements. Work on structure and developing your ideas more fully — the potential is clearly there.`
+    : `This essay needs more development. Focus on length, structure, and using formal academic language. Review the Connectors tab for phrases that will immediately raise your level.`;
+
+  const overall_comment_he = percent >= 80
+    ? `חיבור חזק! אתם מפגינים שליטה טובה בכתיבה אקדמית. התמקדו בהצעות לשיפור כדי להעלות את הציון.`
+    : percent >= 60
+    ? `ניסיון מוצלח עם אלמנטים טובים. עבדו על המבנה ופתחו את הרעיונות ביתר שלמות.`
+    : `החיבור צריך פיתוח נוסף. התמקדו באורך, מבנה ושימוש בשפה אקדמית פורמלית. עיינו בלשונית המחברים.`;
+
+  return { scores, total, percent, grade_label, strengths: strengths.slice(0,3), improvements: improvements.slice(0,4), strengths_he: strengths_he.slice(0,3), improvements_he: improvements_he.slice(0,4), overall_comment, overall_comment_he };
+}
+
 
 function showResults(r, text) {
   document.getElementById('ai-loading').style.display = 'none';

@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Write in English – Grades 11–12 – 150+ Words</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bread: #f5a623;
+    --filling: #e8f4ea;
+    --green: #2ecc71;
+    --dark-green: #27ae60;
+    --blue: #3498db;
+    --dark-blue: #2980b9;
+    --red: #e74c3c;
+    --purple: #9b59b6;
+    --yellow: #f1c40f;
+    --dark: #2c3e50;
+    --light: #ecf0f1;
+    --white: #ffffff;
+    --shadow: 0 4px 15px rgba(0,0,0,0.1);
+    --radius: 16px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: var(--dark);
+  }
+  .page-title {
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.6rem;
+    color: white;
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.3);
+    margin-bottom: 6px;
+  }
+  .subtitle {
+    text-align: center;
+    color: rgba(255,255,255,0.85);
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+  .level-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #f5a623, #e67e22);
+    color: white;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  /* NAV TABS */
+  .nav-tabs {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+  .tab-btn {
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(255,255,255,0.35);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+  }
+  .tab-btn:hover { background: rgba(255,255,255,0.3); transform: translateY(-2px); }
+  .tab-btn.active { background: white; color: #1a1a2e; border-color: white; }
+
+  .section { display: none; animation: fadeIn 0.4s ease; }
+  .section.active { display: block; }
+  @keyframes fadeIn { from { opacity:0; transform: translateY(10px); } to { opacity:1; transform:translateY(0); } }
+
+  .card {
+    background: white;
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+  }
+  .card-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .emoji-badge {
+    font-size: 1.8rem;
+    background: var(--light);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  /* SANDWICH */
+  .sandwich {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin: 20px 0;
+  }
+  .sandwich-layer {
+    width: 100%;
+    max-width: 580px;
+    border-radius: 12px;
+    padding: 16px 24px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.05rem;
+    cursor: default;
+    transition: transform 0.2s;
+    position: relative;
+  }
+  .sandwich-layer:hover { transform: scale(1.02); }
+  .bread-top, .bread-bottom {
+    background: linear-gradient(135deg, #f5a623, #f39c12);
+    color: white;
+    border-radius: 50px 50px 20px 20px;
+  }
+  .bread-bottom { border-radius: 20px 20px 50px 50px; }
+  .lettuce-layer { background: #d5f5d5; color: #27ae60; }
+  .meat-layer { background: #fdebd0; color: #d35400; }
+  .cheese-layer { background: #fef9e7; color: #f39c12; }
+  .extra-layer { background: #eaf2fb; color: #2980b9; }
+
+  .sandwich-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.75;
+    display: block;
+  }
+  .sandwich-content { font-size: 1rem; }
+
+  /* EXAMPLE BOX */
+  .example-box {
+    background: linear-gradient(135deg, #e8f4fd, #d5e8f8);
+    border-left: 5px solid var(--blue);
+    border-radius: 0 12px 12px 0;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  .example-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--blue);
+    margin-bottom: 6px;
+  }
+  .example-text { line-height: 1.8; font-size: 0.98rem; }
+  .highlight { background: #fff3b0; padding: 2px 6px; border-radius: 4px; font-weight: 700; }
+  .highlight-green { background: #d5f5e3; padding: 2px 6px; border-radius: 4px; font-weight: 700; }
+  .highlight-blue { background: #d6eaf8; padding: 2px 6px; border-radius: 4px; font-weight: 700; }
+
+  /* CONNECTOR TABLE */
+  .connector-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.87rem;
+    margin: 16px 0;
+  }
+  .connector-table th {
+    padding: 11px 14px;
+    text-align: left;
+    font-weight: 800;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: white;
+  }
+  .connector-table th.col-open { background: #f5a623; }
+  .connector-table th.col-mid { background: #3498db; }
+  .connector-table th.col-close { background: #27ae60; }
+  .connector-table td {
+    padding: 9px 14px;
+    border: 1px solid #e8ecef;
+    vertical-align: top;
+    line-height: 1.6;
+    font-size: 0.86rem;
+  }
+  .connector-table tr:nth-child(even) td { background: #f8f9fa; }
+  .connector-table tr:hover td { background: #eaf2fb; }
+  .conn-phrase { font-weight: 700; color: #2c3e50; }
+  .conn-he { font-size: 0.78rem; color: #7f8c8d; direction: rtl; display: block; margin-top: 2px; font-style: italic; }
+
+  /* TIPS */
+  .tip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin: 16px 0;
+  }
+  .tip-card {
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+  .tip-card.green { background: #eafaf1; border: 2px solid #a9dfbf; }
+  .tip-card.blue { background: #eaf2fb; border: 2px solid #aed6f1; }
+  .tip-card.orange { background: #fef5e7; border: 2px solid #f8c471; }
+  .tip-card.purple { background: #f5eef8; border: 2px solid #d2b4de; }
+  .tip-card.dark { background: #f4f6f7; border: 2px solid #bdc3c7; }
+  .tip-card h4 { font-weight: 800; margin-bottom: 6px; font-size: 1rem; }
+
+  /* WORD BANK */
+  .word-bank {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 14px 0;
+  }
+  .word-chip {
+    background: var(--light);
+    border: 2px solid #bdc3c7;
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+  }
+  .word-chip:hover { background: var(--blue); color: white; border-color: var(--blue); transform: scale(1.05); }
+  .word-chip.used { background: var(--green); color: white; border-color: var(--green); }
+
+  /* PRACTICE TASKS */
+  .practice-task {
+    background: linear-gradient(135deg, #f0f7ff, #e8f4fd);
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 18px;
+    border: 2px dashed #aed6f1;
+  }
+  .task-number {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2rem;
+    color: var(--blue);
+    float: left;
+    margin-right: 14px;
+    line-height: 1;
+  }
+  .task-prompt {
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  .task-hint {
+    font-size: 0.88rem;
+    color: #7f8c8d;
+    margin-bottom: 12px;
+  }
+  textarea {
+    width: 100%;
+    min-height: 160px;
+    border: 2px solid #d5d8dc;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.95rem;
+    resize: vertical;
+    transition: border-color 0.2s;
+    line-height: 1.6;
+  }
+  textarea:focus { outline: none; border-color: var(--blue); }
+  .word-counter {
+    text-align: right;
+    font-size: 0.82rem;
+    margin-top: 6px;
+    font-weight: 700;
+  }
+  .count-ok { color: var(--green); }
+  .count-over { color: var(--red); }
+  .count-under { color: #95a5a6; }
+  .count-close { color: #e67e22; }
+
+  .check-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.25s;
+  }
+  .check-btn.blue-btn { background: var(--blue); color: white; }
+  .check-btn.green-btn { background: var(--green); color: white; }
+  .check-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+  .feedback-box {
+    margin-top: 12px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    display: none;
+  }
+  .feedback-box.show { display: block; }
+  .feedback-box.success { background: #d5f5e3; color: #1e8449; border: 2px solid #a9dfbf; }
+  .feedback-box.warning { background: #fef9e7; color: #b7950b; border: 2px solid #f9e79f; }
+  .feedback-box.info { background: #eaf2fb; color: #1a5276; border: 2px solid #aed6f1; }
+
+  /* RUBRIC */
+  .rubric-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    margin-top: 16px;
+  }
+  .rubric-table th {
+    background: linear-gradient(135deg, #1a1a2e, #0f3460);
+    color: white;
+    padding: 12px 10px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 0.85rem;
+  }
+  .rubric-table th:first-child { text-align: left; border-radius: 10px 0 0 0; }
+  .rubric-table th:last-child { border-radius: 0 10px 0 0; }
+  .rubric-table td {
+    padding: 10px;
+    border: 1px solid #dfe6e9;
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  .rubric-table tr:nth-child(even) td { background: #f8f9fa; }
+  .rubric-table tr:hover td { background: #eaf2fb; }
+  .criterion-name {
+    font-weight: 800;
+    font-size: 0.9rem;
+    color: #2c3e50;
+  }
+  .score-3 { color: var(--dark-green); font-weight: 700; }
+  .score-2 { color: var(--dark-blue); font-weight: 700; }
+  .score-1 { color: #e67e22; font-weight: 700; }
+  .score-0 { color: var(--red); font-weight: 700; }
+
+  /* COMPARE BOXES */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0;
+  }
+  @media (max-width: 600px) { .compare-grid { grid-template-columns: 1fr; } }
+  .compare-box {
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+  .compare-box.weak { background: #fdf2f8; border: 2px solid #e8a1c8; }
+  .compare-box.strong { background: #eafaf1; border: 2px solid #a9dfbf; }
+  .compare-label {
+    font-weight: 800;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  /* ACCORDION */
+  .accordion {
+    border: 2px solid #dfe6e9;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  .accordion-header {
+    background: #f8f9fa;
+    padding: 14px 20px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s;
+  }
+  .accordion-header:hover { background: #eaf2fb; }
+  .accordion-header .arrow { transition: transform 0.3s; font-size: 1.2rem; }
+  .accordion-header.open .arrow { transform: rotate(180deg); }
+  .accordion-body {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.35s ease;
+  }
+  .accordion-body.open { max-height: 2000px; padding: 16px 20px; }
+
+  /* DIVIDER */
+  .section-divider {
+    text-align: center;
+    margin: 22px 0;
+    position: relative;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.1rem;
+    color: #7f8c8d;
+  }
+  .section-divider::before, .section-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    height: 2px;
+    background: #dfe6e9;
+  }
+  .section-divider::before { left: 0; }
+  .section-divider::after { right: 0; }
+
+  /* EXTENSION BADGE */
+  .extension-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+
+  /* HEBREW NOTES */
+  .he {
+    direction: rtl;
+    font-family: 'Segoe UI', 'Arial Hebrew', Arial, sans-serif;
+    font-size: 0.84rem;
+    color: #5d6d7e;
+    background: #f4f6f7;
+    border-right: 3px solid #aab7c4;
+    border-radius: 0 8px 8px 0;
+    padding: 6px 10px 6px 8px;
+    margin-top: 6px;
+    line-height: 1.6;
+    display: block;
+  }
+  .he strong { color: #2c3e50; }
+  .he-inline {
+    direction: rtl;
+    font-family: 'Segoe UI', 'Arial Hebrew', Arial, sans-serif;
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    display: block;
+    margin-top: 3px;
+    font-style: italic;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 700px) {
+    .page-title { font-size: 1.9rem; }
+    .card { padding: 18px; }
+    .rubric-table { font-size: 0.78rem; }
+    .connector-table { font-size: 0.78rem; }
+  }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">✍️ Academic Writing in English <span class="level-badge">Grades 11–12</span></h1>
+<p class="subtitle">150+ Words • Descriptive & Argumentative • Advanced Connectors</p>
+<p style="text-align:center; color:rgba(255,255,255,0.75); font-size:0.95rem; margin-bottom:20px; direction:rtl; font-family:'Segoe UI','Arial Hebrew',Arial,sans-serif;">כיתות י"א–י"ב • כתיבה אקדמית • 150 מילים ומעלה • מחברים מתקדמים</p>
+
+<nav class="nav-tabs">
+  <button class="tab-btn active" onclick="showTab('intro')">🎯 Intro</button>
+  <button class="tab-btn" onclick="showTab('descriptive')">🖼️ Descriptive</button>
+  <button class="tab-btn" onclick="showTab('argumentative')">💬 Argumentative</button>
+  <button class="tab-btn" onclick="showTab('connectors')">🔗 Connectors</button>
+  <button class="tab-btn" onclick="showTab('practice')">✏️ Practice</button>
+  <button class="tab-btn" onclick="showTab('rubric')">📊 Rubric</button>
+  <button class="tab-btn" onclick="showTab('aigrade')">🤖 AI Grader</button>
+</nav>
+
+<!-- ══════════════ INTRO ══════════════ -->
+<div id="intro" class="section active">
+
+  <div class="card">
+    <div class="card-title" style="color:#0f3460">
+      <div class="emoji-badge">🎯</div>
+      What Are We Writing at This Level?
+    </div>
+    <p style="font-size:1.05rem; line-height:1.8; margin-bottom:16px;">
+      At grades 11–12 level, writing means more than just covering the topic. You need to <strong>develop your ideas</strong>, use a <strong>rich variety of language</strong>, and show the examiner that you can write with <strong>clarity, structure, and depth</strong> — in at least <strong>150 words</strong>.
+      <span class="he">בכיתות י"א–י"ב, כתיבה טובה היא הרבה יותר מסתם כיסוי הנושא. צריך <strong>לפתח רעיונות</strong>, להשתמש במגוון <strong>שפה עשירה</strong>, ולהראות בוחן שאתם יכולים לכתוב בבהירות, מבנה ועומק — ב<strong>לפחות 150 מילים</strong>.</span>
+    </p>
+    <div class="tip-grid">
+      <div class="tip-card green">
+        <h4>🖼️ Descriptive Text</h4>
+        Create a vivid, multi-layered portrait — of a place, person, experience, or phenomenon. Use <strong>precise vocabulary</strong>, sensory language, and varied sentence structures.
+        <span class="he-inline">תאור מרובד ועשיר — של מקום, אדם, חוויה, או תופעה. שפה מדויקת, חושנית, ומשפטים מגוונים.</span>
+      </div>
+      <div class="tip-card blue">
+        <h4>💬 Argumentative Text</h4>
+        Present a <strong>well-reasoned position</strong>. Acknowledge the opposing view, support your arguments with examples or evidence, and conclude with conviction.
+        <span class="he-inline">הצגת עמדה מנומקת. הכרה בדעה הנגדית, תמיכה בטיעונים עם דוגמאות, וסיכום משכנע.</span>
+      </div>
+    </div>
+    <div style="margin-top:14px; padding:16px 20px; background:linear-gradient(135deg,#fff8e1,#fef5e7); border-radius:12px; border:2px solid #f39c12; font-size:0.97rem;">
+      <strong>📏 The 150+ Word Standard:</strong> Your writing should be <em>at least</em> 150 words. A well-developed text will typically reach 180–220 words. Think in <strong>paragraphs</strong>, not just sentences — each paragraph has a role to play.
+      <span class="he">הכתיבה שלכם צריכה להיות <em>לפחות</em> 150 מילים. טקסט מפותח יגיע בדרך כלל ל-180–220 מילים. חשבו ב<strong>פסקאות</strong>, לא רק במשפטים — לכל פסקה תפקיד.</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title" style="color:#e67e22">
+      <div class="emoji-badge">🏗️</div>
+      The Multi-Paragraph Essay Structure
+    </div>
+    <p style="margin-bottom:16px; line-height:1.7;">
+      A 150+ word essay needs more than one paragraph. Think of it as an <strong>expanded sandwich</strong>:
+      <span class="he">חיבור של 150+ מילים צריך יותר מפסקה אחת. חשבו על זה כסנדוויץ׳ <strong>מורחב</strong>:</span>
+    </p>
+    <div class="sandwich">
+      <div class="sandwich-layer bread-top">
+        <span class="sandwich-label">🍞 Introduction — Opening Paragraph</span>
+        <span class="sandwich-content">Hook the reader + introduce the topic + state your main idea (thesis)</span>
+        <span class="he-inline">פתיחה מושכת + הצגת הנושא + הצהרת הרעיון המרכזי</span>
+      </div>
+      <div class="sandwich-layer lettuce-layer">
+        <span class="sandwich-label">🥬 Body Paragraph 1 — First Main Point</span>
+        <span class="sandwich-content">Topic sentence → Explanation → Example / Evidence → Link back</span>
+        <span class="he-inline">משפט נושא → הסבר → דוגמה/עדות → חיבור חזרה לנושא</span>
+      </div>
+      <div class="sandwich-layer meat-layer">
+        <span class="sandwich-label">🥩 Body Paragraph 2 — Second Main Point</span>
+        <span class="sandwich-content">Topic sentence → Explanation → Example / Evidence → Link back</span>
+        <span class="he-inline">משפט נושא → הסבר → דוגמה/עדות → חיבור חזרה לנושא</span>
+      </div>
+      <div class="sandwich-layer cheese-layer">
+        <span class="sandwich-label">🧀 Counter-argument / Extra Point <span class="extension-badge">Recommended</span></span>
+        <span class="sandwich-content">Acknowledge the other side — then refute or qualify it</span>
+        <span class="he-inline">הכירו בצד השני — ואז הפריכו או הסייגו</span>
+      </div>
+      <div class="sandwich-layer extra-layer">
+        <span class="sandwich-label">🫐 Body Paragraph 3 — Further Development</span>
+        <span class="sandwich-content">Add a third point, deepen your argument, or widen the scope</span>
+        <span class="he-inline">נקודה שלישית, העמקת הטיעון, או הרחבת ההיקף</span>
+      </div>
+      <div class="sandwich-layer bread-bottom">
+        <span class="sandwich-label">🍞 Conclusion — Closing Paragraph</span>
+        <span class="sandwich-content">Summarise + restate your position + final thought or call to action</span>
+        <span class="he-inline">סיכום + חזרה על עמדתכם + מחשבה אחרונה או קריאה לפעולה</span>
+      </div>
+    </div>
+    <div class="example-box" style="margin-top:18px;">
+      <div class="example-label">⚡ Opening Paragraph — Example</div>
+      <div class="example-text">
+        <span class="highlight">The question of whether social media has transformed human connection for better or for worse has become one of the defining debates of our time.</span> 
+        Although many people believe that platforms such as Instagram and WhatsApp have brought us closer together, one must always remember that there is usually more than one side to this issue. 
+        <span class="highlight">In this essay, I will argue that while social media offers undeniable benefits, its long-term impact on genuine human relationships deserves serious concern.</span>
+      </div>
+    </div>
+    <p style="margin-top:10px; font-size:0.88rem; color:#7f8c8d; font-weight:600;">
+      🟡 Topic sentence = orange highlight | 🟡 Thesis = orange highlight | Middle = development
+    </p>
+  </div>
+
+</div>
+
+<!-- ══════════════ DESCRIPTIVE ══════════════ -->
+<div id="descriptive" class="section">
+
+  <div class="card">
+    <div class="card-title" style="color:#27ae60">
+      <div class="emoji-badge">🖼️</div>
+      Descriptive Writing — Painting with Precision
+    </div>
+    <p style="line-height:1.8; margin-bottom:16px; font-size:1.02rem;">
+      Advanced descriptive writing goes beyond listing details. You must <strong>create an atmosphere</strong>, choose words with care, and take the reader on a journey. Use figurative language, varied sentence length, and all five senses.
+      <span class="he">כתיבה תיאורית ברמה גבוהה עוברת מעבר לרישום פרטים. אתם צריכים <strong>ליצור אווירה</strong>, לבחור מילים בקפידה, ולקחת את הקורא למסע. שפה פיגורטיבית, אורכי משפטים מגוונים, וחמשת החושים.</span>
+    </p>
+    <div class="tip-grid">
+      <div class="tip-card green"><h4>🎭 Atmosphere & Mood</h4>Don't just describe — <em>feel</em> the place. Is it melancholy? Energetic? Unsettling? Every detail should support the mood.<br><span class="he-inline">אל רק תתארו — <em>חושו</em> את המקום. האם הוא עצוב? נמרץ? מטריד? כל פרט צריך לתמוך באווירה.</span></div>
+      <div class="tip-card blue"><h4>🖌️ Figurative Language</h4>Simile: "like a…" / "as … as …"<br>Metaphor: "The city was a machine…"<br>Personification: "The wind whispered…"<br><span class="he-inline">השוואה / מטאפורה / אנשת דומם — שפה ציורית</span></div>
+      <div class="tip-card orange"><h4>📐 Sentence Variety</h4>Mix short punchy sentences with longer, flowing ones. Start sentences differently — not always with "The" or "I".<br><span class="he-inline">שלבו משפטים קצרים עם ארוכים. התחילו משפטים בצורות שונות.</span></div>
+      <div class="tip-card purple"><h4>🔍 Precise Vocabulary</h4>Replace: said → <strong>murmured / declared</strong><br>walked → <strong>strode / wandered</strong><br>big → <strong>vast / overwhelming</strong><br><span class="he-inline">בחרו מילים מדויקות ועשירות יותר</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title" style="color:#2980b9">
+      <div class="emoji-badge">📝</div>
+      How to Build a 150+ Word Descriptive Text
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAcc(this)">
+        🍞 Introduction — Set the Scene
+        <span class="arrow">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p style="margin-bottom:10px; line-height:1.7;">Your opening paragraph should <strong>draw the reader in immediately</strong>. Avoid starting with "I" — use one of these powerful openers from the official phrase bank:
+        <span class="he">הפסקה הפותחת צריכה <strong>למשוך את הקורא מיד</strong>. הימנעו מהתחלה עם "I" — השתמשו באחד מהפותחים החזקים האלה:</span></p>
+        <div class="word-bank">
+          <span class="word-chip">The phenomenon concerning...</span>
+          <span class="word-chip">Recently, we have become increasingly aware of...</span>
+          <span class="word-chip">There are some factors which must be taken into account...</span>
+          <span class="word-chip">When discussing the issue of...</span>
+          <span class="word-chip">It is a commonly held belief that...</span>
+        </div>
+        <div class="example-box">
+          <div class="example-label">✅ Strong Descriptive Opening</div>
+          <div class="example-text">
+            <span class="highlight">There are some factors which must be taken into account when trying to understand the particular magic of the old city at dawn.</span> Long before the shopkeepers arrive, the narrow alleys belong entirely to the morning light — pale gold and uncommonly still.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAcc(this)">
+        🥬🥩 Body Paragraphs — Layers of Detail
+        <span class="arrow">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p style="margin-bottom:10px; line-height:1.7;">Each body paragraph should open with a <strong>topic sentence</strong>, develop with detail and figurative language, and link forward. Use middle-paragraph connectors:
+        <span class="he">כל פסקת גוף צריכה לפתוח עם <strong>משפט נושא</strong>, להתפתח עם פרטים ושפה ציורית, ולקשר קדימה. השתמשו במחברים לפסקות אמצע:</span></p>
+        <div class="tip-grid">
+          <div class="tip-card green">
+            <h4>🟢 Opening a body paragraph</h4>
+            <strong>First and foremost, it is important to state that…</strong><br>
+            <strong>To begin with, it is worth mentioning that…</strong><br>
+            <strong>First, it is essential to remember that…</strong>
+            <span class="he-inline">פתיחת פסקת גוף ראשונה</span>
+          </div>
+          <div class="tip-card blue">
+            <h4>🔵 Adding another paragraph</h4>
+            <strong>Another point that should be taken into consideration is…</strong><br>
+            <strong>A further dimension of this experience is…</strong><br>
+            <strong>It is a well-known fact that…</strong>
+            <span class="he-inline">פתיחת פסקת גוף נוספת</span>
+          </div>
+        </div>
+        <div class="example-box">
+          <div class="example-label">✅ Body Paragraph — Descriptive</div>
+          <div class="example-text">
+            <span class="highlight-green">First and foremost, it is important to state that the market's power lies not in any single detail, but in the overwhelming accumulation of them.</span> The stalls are piled with vegetables in every shade of orange and green, their colours almost theatrical under the fluorescent lights. The air is thick with competing scents — cumin, fresh bread, something sweet and slightly burned. At the same time, the noise is relentless: vendors calling out, trolleys rattling over uneven cobblestones, a radio somewhere playing a song nobody seems to know.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAcc(this)">
+        🍞 Conclusion — Leave a Lasting Impression
+        <span class="arrow">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p style="margin-bottom:10px; line-height:1.7;">End with a paragraph that <strong>completes the circle</strong> — echo something from your opening, and leave the reader with a final image or reflection. Use concluding connectors:
+        <span class="he">סיימו בפסקה שמשלימה את המעגל — חזרו לפתיחה, והשאירו בקורא דימוי או הרהור אחרון. השתמשו במחברי סיכום:</span></p>
+        <div class="word-bank">
+          <span class="word-chip">To conclude, it is necessary to remember that...</span>
+          <span class="word-chip">Considering everything I have just written...</span>
+          <span class="word-chip">All in all...</span>
+          <span class="word-chip">It is about time people realized that...</span>
+          <span class="word-chip">In conclusion, bearing this in mind...</span>
+        </div>
+        <div class="example-box">
+          <div class="example-label">✅ Full Descriptive Text (~175 words)</div>
+          <div class="example-text">
+            <span class="highlight">There are some factors which must be taken into account when trying to understand the particular magic of the old city market at dawn.</span> Long before the shopkeepers arrive, the narrow alleys belong entirely to the morning light — pale gold and uncommonly still.<br><br>
+            <span class="highlight-green">First and foremost, it is important to state that the market's power lies not in any single detail, but in the overwhelming accumulation of them.</span> The stalls are piled with vegetables in every shade of orange and green. The air is thick with competing scents — cumin, fresh bread, something sweet and slightly burned. At the same time, the noise is relentless: vendors calling out, trolleys rattling, a radio playing a song nobody seems to know.<br><br>
+            <span class="highlight">Considering everything I have just mentioned, it becomes clear that the market is far more than a place to buy and sell — it is the living memory of the city itself.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════ ARGUMENTATIVE ══════════════ -->
+<div id="argumentative" class="section">
+
+  <div class="card">
+    <div class="card-title" style="color:#8e44ad">
+      <div class="emoji-badge">💬</div>
+      Argumentative Writing — Persuade with Evidence
+    </div>
+    <p style="line-height:1.8; margin-bottom:16px; font-size:1.02rem;">
+      At this level, a strong argument does not only state an opinion — it <strong>anticipates objections</strong>, uses <strong>research and evidence</strong>, and guides the reader to agree with you through <strong>logic and passion</strong> combined.
+      <span class="he">ברמה זו, טיעון חזק לא רק מציג דעה — הוא <strong>מצפה להתנגדויות</strong>, משתמש ב<strong>מחקר וראיות</strong>, ומוביל את הקורא להסכים איתך דרך <strong>היגיון ותשוקה</strong> כאחד.</span>
+    </p>
+    <div class="example-box" style="border-left-color: #9b59b6; background: linear-gradient(135deg,#f5eef8,#ede4f5);">
+      <div class="example-label" style="color:#8e44ad;">The Argumentative Essay Structure</div>
+      <div class="example-text">
+        <strong>Intro</strong> (hook + context + thesis) → <strong>Body 1</strong> (first argument + evidence) → <strong>Body 2</strong> (second argument + example) → <strong>Counter-argument</strong> (acknowledge + refute) → <strong>Conclusion</strong> (restate + call to action)
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title" style="color:#8e44ad">
+      <div class="emoji-badge">📝</div>
+      How to Write a 150+ Word Argumentative Essay
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAcc(this)">
+        🍞 Introduction — Hook, Context, Thesis
+        <span class="arrow">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p style="margin-bottom:10px; line-height:1.7;">Open by naming the issue, providing brief context, and ending the paragraph with a clear <strong>thesis statement</strong>. Use these academic openers:
+        <span class="he">פתחו בשמות הסוגיה, הקשר קצר, וסיימו את הפסקה עם <strong>הצהרת תזה</strong> ברורה:</span></p>
+        <div class="word-bank">
+          <span class="word-chip">Although many people believe that..., it is, in my opinion, a misconception.</span>
+          <span class="word-chip">When discussing the issue of... I firmly believe that...</span>
+          <span class="word-chip">... is a controversial issue. Some claim that... while others believe...</span>
+          <span class="word-chip">The issue of ... is a source of controversy in our society.</span>
+          <span class="word-chip">Nowadays many people are concerned about the problem of...</span>
+          <span class="word-chip">It is a commonly held belief that... In this essay, I will point out...</span>
+        </div>
+        <div class="example-box">
+          <div class="example-label">✅ Academic Opening Paragraph</div>
+          <div class="example-text">
+            <span class="highlight">Although many people believe that social media has made us more connected, it is, in my opinion, a misconception.</span> The question of how technology shapes human relationships has fascinated researchers and worried parents in equal measure. There is no doubt that platforms such as Instagram and WhatsApp offer real conveniences — yet the cost to authentic communication may be higher than we are willing to admit. <span class="highlight">In this essay, I will point out arguments which support my view that excessive social media use is damaging our ability to form meaningful relationships.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAcc(this)">
+        🥬🥩 Body Paragraphs — Arguments with Evidence
+        <span class="arrow">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p style="margin-bottom:10px; line-height:1.7;">Each argument paragraph follows this pattern: <strong>topic sentence → explanation → evidence or example → link back to thesis</strong>. Use these academic phrases:
+        <span class="he">כל פסקת טיעון עוקבת אחרי דפוס זה: <strong>משפט נושא → הסבר → ראיה או דוגמה → חיבור לתזה</strong>. השתמשו בביטויים אקדמיים:</span></p>
+        <div class="tip-grid">
+          <div class="tip-card orange">
+            <h4>First argument <span class="he-inline">טיעון ראשון</span></h4>
+            <strong>First and foremost, it is important to state that…</strong><br>
+            <strong>To begin with, it is worth mentioning that…</strong><br>
+            Then: <em>Research has shown… / Studies have proved…</em>
+            <span class="he-inline">ראשית — עדות מחקרית</span>
+          </div>
+          <div class="tip-card purple">
+            <h4>Second argument <span class="he-inline">טיעון שני</span></h4>
+            <strong>Another point that should be taken into consideration is (that)…</strong><br>
+            <strong>A further argument in favour of / against… is…</strong><br>
+            Then: <em>For example… / For instance…</em>
+            <span class="he-inline">טיעון נוסף — דוגמה</span>
+          </div>
+          <div class="tip-card blue">
+            <h4>Counter-argument <span class="he-inline">טיעון נגד</span></h4>
+            <strong>Opponents / Proponents of … take a different view about…</strong><br>
+            <strong>One commonly heard objection to this argument is…</strong><br>
+            Then refute: <em>However… / Nevertheless… / Despite this…</em>
+            <span class="he-inline">הכירו בצד השני — ואז הפריכו</span>
+          </div>
+        </div>
+        <div class="example-box">
+          <div class="example-label">✅ Two Body Paragraphs</div>
+          <div class="example-text">
+            <span class="highlight-green">First and foremost, it is important to state that constant connectivity is eroding our capacity for deep, focused attention.</span> Research has shown that the average person checks their phone over 150 times a day — a habit that fragments concentration and makes sustained conversation increasingly difficult. When we sit with a friend yet compulsively glance at a screen, we signal, however unintentionally, that the digital world takes priority over the person in front of us.<br><br>
+            <span class="highlight-blue">Another point that should be taken into consideration is the growing body of evidence linking heavy social media use to feelings of loneliness and inadequacy.</span> Studies have proved that teenagers who spend more than three hours a day on social platforms report significantly higher levels of anxiety. For instance, the curated nature of online profiles creates a constant, unfair comparison between one's private reality and another's public performance.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAcc(this)">
+        🍞 Conclusion — Restate, Reinforce, Remember
+        <span class="arrow">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p style="margin-bottom:10px; line-height:1.7;">Your conclusion should do three things: <strong>summarise</strong>, <strong>restate your position</strong> (in new words), and end with a <strong>memorable final thought</strong>. Use:
+        <span class="he">המסקנה צריכה לעשות שלושה דברים: <strong>לסכם</strong>, <strong>לחזור על עמדתכם</strong> (במילים חדשות), ולסיים ב<strong>מחשבה בלתי נשכחת</strong>:</span></p>
+        <div class="word-bank">
+          <span class="word-chip">To sum up, as I have mentioned above, I am totally convinced that...</span>
+          <span class="word-chip">In conclusion, never have I been more convinced that...</span>
+          <span class="word-chip">All things considered, I strongly believe that...</span>
+          <span class="word-chip">To conclude, it is essential to remember that...</span>
+          <span class="word-chip">It is about time people realized / understood that...</span>
+          <span class="word-chip">If I were ... I would...</span>
+          <span class="word-chip">Considering everything I have just written, you too will agree that...</span>
+        </div>
+        <div class="example-box">
+          <div class="example-label">✅ Strong Concluding Paragraph</div>
+          <div class="example-text">
+            <span class="highlight">To sum up, as I have mentioned above, I am totally convinced that while social media can serve as a valuable tool for communication, its uncritical and excessive use poses a genuine threat to the quality of our interpersonal relationships.</span> Opponents of this view may argue that technology simply reflects human choice — and that is a fair point. Nevertheless, the freedom to choose comes with the responsibility to choose wisely. <span class="highlight">It is about time we recognized that a like on a screen is no substitute for genuine human presence, and that protecting our capacity for real connection may be one of the most important choices of our generation.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider">Compare these arguments</div>
+
+    <div class="compare-grid">
+      <div class="compare-box weak">
+        <div class="compare-label" style="color:#c0392b;">❌ Weak Argument</div>
+        I think social media is bad. People use it too much. It makes them sad. Also they don't talk to friends. I think it should be banned. That is my opinion.
+        <br><br><em style="font-size:0.82rem; color:#7f8c8d;">No connectors, no evidence, no counter-argument, no conclusion</em>
+        <span class="he-inline">אין מחברים, אין ראיות, אין טיעון נגד, אין מסקנה</span>
+      </div>
+      <div class="compare-box strong">
+        <div class="compare-label" style="color:#1e8449;">✅ Strong Argument</div>
+        Although many people believe social media connects us, it is, in my opinion, a misconception. First and foremost, research has shown that heavy use is linked to loneliness. Another point worth considering is that constant scrolling destroys our ability to focus. Opponents may argue that this depends on the user — however, the evidence suggests otherwise. To conclude, I am totally convinced that we must use social media with far greater awareness.
+        <br><br><em style="font-size:0.82rem; color:#27ae60;">Academic openers, evidence, counter-argument, strong conclusion</em>
+        <span class="he-inline">פתיחות אקדמיות, ראיות, טיעון נגד, מסקנה חזקה</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════ CONNECTORS ══════════════ -->
+<div id="connectors" class="section">
+
+  <div class="card">
+    <div class="card-title" style="color:#0f3460">
+      <div class="emoji-badge">🔗</div>
+      Advanced Connectors & Phrases
+    </div>
+    <p style="line-height:1.8; margin-bottom:6px; font-size:1.02rem;">
+      The phrases below are organized by where they appear in your essay. Using a variety of these will significantly raise the level of your writing.
+      <span class="he">הביטויים למטה מאורגנים לפי מיקומם בחיבור. שימוש במגוון מהם יעלה משמעותית את רמת הכתיבה שלכם.</span>
+    </p>
+  </div>
+
+  <div class="card" style="overflow-x:auto;">
+    <div class="card-title" style="color:#f5a623">
+      <div class="emoji-badge">🍞</div>
+      Opening Paragraph Phrases
+    </div>
+    <table class="connector-table">
+      <thead>
+        <tr><th class="col-open" style="border-radius:8px 8px 0 0;">Phrase</th><th class="col-open">Hebrew</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="conn-phrase">The phenomenon concerning/regarding ... has always been a cause of concern.</span></td><td><span class="conn-he">התופעה הנוגעת ל... תמיד הייתה מקור לדאגה.</span></td></tr>
+        <tr><td><span class="conn-phrase">Although many people believe/think/claim that ..., it is, in my opinion, a mistaken belief / misconception.</span></td><td><span class="conn-he">למרות שרבים מאמינים ש..., לדעתי, זוהי תפיסה מוטעית.</span></td></tr>
+        <tr><td><span class="conn-phrase">Although many people believe that ..., one must always remember that there is usually more than one side to this issue.</span></td><td><span class="conn-he">...יש תמיד יותר מצד אחד לסוגיה.</span></td></tr>
+        <tr><td><span class="conn-phrase">There are some factors which must be taken into account ...</span></td><td><span class="conn-he">ישנם גורמים שיש לקחת בחשבון...</span></td></tr>
+        <tr><td><span class="conn-phrase">Recently, we have become increasingly aware of the fact that...</span></td><td><span class="conn-he">לאחרונה, הפכנו מודעים יותר ויותר לעובדה ש...</span></td></tr>
+        <tr><td><span class="conn-phrase">When discussing the issue of ... I firmly believe that ... In this essay, I will point out arguments which support my opinion.</span></td><td><span class="conn-he">כאשר דנים בסוגיה של... אני מאמין בתוקף ש...</span></td></tr>
+        <tr><td><span class="conn-phrase">Nowadays many people are concerned about / aware of the problem of...</span></td><td><span class="conn-he">כיום רבים חששו מ... / מודעים לבעיית...</span></td></tr>
+        <tr><td><span class="conn-phrase">... is a controversial issue. Some people claim that ... while others believe ...</span></td><td><span class="conn-he">... הוא נושא שנוי במחלוקת. יש הטוענים ש..., בעוד אחרים מאמינים ש...</span></td></tr>
+        <tr><td><span class="conn-phrase">The issue of ... is a source of controversy in our society.</span></td><td><span class="conn-he">הסוגיה של... היא מקור לוויכוח בחברתנו.</span></td></tr>
+        <tr><td><span class="conn-phrase">I have been asked to state my opinion as to whether ...</span></td><td><span class="conn-he">התבקשתי להביע את דעתי בשאלה האם...</span></td></tr>
+        <tr><td><span class="conn-phrase">It is a commonly held belief that ...</span></td><td><span class="conn-he">ישנה אמונה נפוצה כי...</span></td></tr>
+        <tr><td><span class="conn-phrase">In my opinion / In my point of view / Personally / As I see it ...</span></td><td><span class="conn-he">לדעתי / מנקודת מבטי / באופן אישי / כפי שאני רואה זאת...</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card" style="overflow-x:auto;">
+    <div class="card-title" style="color:#3498db">
+      <div class="emoji-badge">🥬</div>
+      Middle / Body Paragraph Phrases
+    </div>
+    <table class="connector-table">
+      <thead>
+        <tr><th class="col-mid" style="border-radius:8px 8px 0 0;">Phrase</th><th class="col-mid">Hebrew</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="conn-phrase">First, it is essential to remember that ...</span></td><td><span class="conn-he">ראשית, חשוב לזכור כי...</span></td></tr>
+        <tr><td><span class="conn-phrase">To begin with, it is worth mentioning that ...</span></td><td><span class="conn-he">לכתחילה, ראוי להזכיר כי...</span></td></tr>
+        <tr><td><span class="conn-phrase">First and foremost, it is important to state that ...</span></td><td><span class="conn-he">בראש ובראשונה, חשוב לציין כי...</span></td></tr>
+        <tr><td><span class="conn-phrase">Opponents / Proponents of ... take a different view about ...</span></td><td><span class="conn-he">מתנגדי / תומכי... מחזיקים בדעה שונה לגבי...</span></td></tr>
+        <tr><td><span class="conn-phrase">On the one hand, ... On the other hand, ...</span></td><td><span class="conn-he">מצד אחד,... מצד שני,...</span></td></tr>
+        <tr><td><span class="conn-phrase">Another point that should be taken into consideration is (that) ...</span></td><td><span class="conn-he">נקודה נוספת שיש לשקול היא...</span></td></tr>
+        <tr><td><span class="conn-phrase">A further argument against / in favour of ... is ...</span></td><td><span class="conn-he">טיעון נוסף נגד / בעד... הוא...</span></td></tr>
+        <tr><td><span class="conn-phrase">One / Another commonly heard objection to this argument is ...</span></td><td><span class="conn-he">התנגדות נפוצה לטיעון זה היא...</span></td></tr>
+        <tr><td><span class="conn-phrase">It is a well-known fact that ...</span></td><td><span class="conn-he">עובדה ידועה היא ש...</span></td></tr>
+        <tr><td><span class="conn-phrase">Research has shown ... / Studies have proved ...</span></td><td><span class="conn-he">מחקרים הראו... / מחקרים הוכיחו...</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card" style="overflow-x:auto;">
+    <div class="card-title" style="color:#27ae60">
+      <div class="emoji-badge">🍞</div>
+      Closing / Conclusion Phrases
+    </div>
+    <table class="connector-table">
+      <thead>
+        <tr><th class="col-close" style="border-radius:8px 8px 0 0;">Phrase</th><th class="col-close">Hebrew</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="conn-phrase">To conclude, it is necessary to remember that ... / It is essential ... / It is vital ...</span></td><td><span class="conn-he">לסיכום, חשוב לזכור כי...</span></td></tr>
+        <tr><td><span class="conn-phrase">All in all, the advantages outweigh the disadvantages ... Therefore, I am quite certain that ...</span></td><td><span class="conn-he">בסך הכל, היתרונות עולים על החסרונות... לפיכך, אני בטוח למדי ש...</span></td></tr>
+        <tr><td><span class="conn-phrase">To sum up, as I have mentioned above, I am totally convinced that ...</span></td><td><span class="conn-he">לסיכום, כפי שציינתי לעיל, אני משוכנע לחלוטין ש...</span></td></tr>
+        <tr><td><span class="conn-phrase">In conclusion, never have I been more convinced that ...</span></td><td><span class="conn-he">לסיכום, מעולם לא הייתי משוכנע יותר ש...</span></td></tr>
+        <tr><td><span class="conn-phrase">In conclusion, bearing this in mind, I strongly believe that ...</span></td><td><span class="conn-he">לסיכום, בהתחשב בכך, אני מאמין בתוקף ש...</span></td></tr>
+        <tr><td><span class="conn-phrase">Considering everything I have just written / mentioned, you too will agree that ...</span></td><td><span class="conn-he">בהתחשב בכל שכתבתי, גם אתם תסכימו ש...</span></td></tr>
+        <tr><td><span class="conn-phrase">In conclusion, having mentioned all, I strongly believe that ...</span></td><td><span class="conn-he">לסיכום, לאחר שציינתי הכל, אני מאמין בתוקף ש...</span></td></tr>
+        <tr><td><span class="conn-phrase">To sum up, in light of the arguments presented above, I tend to agree / disagree with ...</span></td><td><span class="conn-he">לסיכום, לאור הטיעונים שהוצגו לעיל, אני נוטה להסכים / לא להסכים עם...</span></td></tr>
+        <tr><td><span class="conn-phrase">Finally, after considering the pros and cons, I think that ...</span></td><td><span class="conn-he">לבסוף, לאחר שבחנתי את הצדדים, אני חושב ש...</span></td></tr>
+        <tr><td><span class="conn-phrase">All things considered, I strongly believe that ...</span></td><td><span class="conn-he">בשקלל את הכל, אני מאמין בתוקף ש...</span></td></tr>
+        <tr><td><span class="conn-phrase">If I were ... I would ...</span></td><td><span class="conn-he">אם הייתי... הייתי...</span></td></tr>
+        <tr><td><span class="conn-phrase">It is about time people realized / understood that ...</span></td><td><span class="conn-he">הגיע הזמן שאנשים יבינו / יכירו ש...</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<!-- ══════════════ PRACTICE ══════════════ -->
+<div id="practice" class="section">
+
+  <div class="card">
+    <div class="card-title" style="color:#e67e22">
+      <div class="emoji-badge">✏️</div>
+      Practice Tasks — Write at Full Strength!
+    </div>
+    <p style="line-height:1.7; margin-bottom:8px; font-size:1.02rem;">
+      These tasks reflect the standard expected in your final exams. Use the connectors from the Connectors tab and aim for depth, structure, and clarity.
+      <span class="he">המשימות האלה משקפות את הרמה הנדרשת במבחן הבגרות. השתמשו במחברים מלשונית המחברים ושאפו לעומק, מבנה ובהירות.</span>
+    </p>
+    <div style="background:linear-gradient(135deg,#fff8e1,#fef5e7); border-radius:10px; padding:12px 16px; font-size:0.95rem; font-weight:700; border:2px solid #f39c12;">
+      📏 Target: <strong>150–200 words</strong> per text. The word counter will guide you.
+      <span class="he">יעד: <strong>150–200 מילים</strong> לטקסט. מונה המילים ידריך אתכם.</span>
+    </div>
+  </div>
+
+  <!-- TASK 1 -->
+  <div class="practice-task">
+    <div class="task-number">1</div>
+    <div class="task-prompt">
+      🖼️ <strong>Descriptive Task — A Place or Experience</strong><br>
+      <span style="font-weight:600;">Write a multi-paragraph descriptive text about a place, person, or experience that left a strong impression on you. Use figurative language and the 5 senses.</span>
+      <span class="he">כתבו טקסט תיאורי בן מספר פסקאות על מקום, אדם, או חוויה שהותירו בכם רושם עמוק. השתמשו בשפה ציורית וחמשת החושים.</span>
+    </div>
+    <div class="task-hint">
+      💡 Structure: Introduction (set the scene) → Body §1 (first strong impression — use "First and foremost...") → Body §2 (deeper detail — use "Another point...") → Conclusion (echo the opening, final reflection — use "Considering everything...")
+      <span class="he">מבנה: פתיחה → פסקת גוף 1 → פסקת גוף 2 → מסקנה</span>
+    </div>
+    <div class="word-bank" style="margin-bottom:10px;">
+      <span class="word-chip" onclick="insertWord(this,'task1')">There are some factors which must be taken into account</span>
+      <span class="word-chip" onclick="insertWord(this,'task1')">First and foremost, it is important to state that</span>
+      <span class="word-chip" onclick="insertWord(this,'task1')">Another point that should be taken into consideration is</span>
+      <span class="word-chip" onclick="insertWord(this,'task1')">Considering everything I have just written</span>
+      <span class="word-chip" onclick="insertWord(this,'task1')">At the same time</span>
+      <span class="word-chip" onclick="insertWord(this,'task1')">It is a well-known fact that</span>
+    </div>
+    <textarea id="task1" placeholder="Write your descriptive essay here... (aim for 150–200 words)" oninput="countWords('task1','counter1')"></textarea>
+    <div class="word-counter" id="counter1"><span class="count-under">0 words</span></div>
+    <button class="check-btn green-btn" onclick="checkTask('task1','fb1','descriptive')">✅ Check my text</button>
+    <div class="feedback-box" id="fb1"></div>
+  </div>
+
+  <!-- TASK 2 -->
+  <div class="practice-task" style="background: linear-gradient(135deg,#f5eef8,#ede4f5); border-color:#d2b4de;">
+    <div class="task-number" style="color:#8e44ad;">2</div>
+    <div class="task-prompt">
+      💬 <strong>Argumentative Task — Take a Position</strong><br>
+      <span style="font-weight:600;">Choose ONE topic and write a structured argumentative essay. Include a counter-argument.</span>
+      <span class="he">בחרו נושא <strong>אחד</strong> וכתבו חיבור טיעוני מובנה. כללו טיעון נגד.</span>
+    </div>
+    <div class="tip-grid" style="margin:12px 0;">
+      <div class="tip-card purple">🤖 Is artificial intelligence a threat or a benefit to society?<span class="he-inline">האם בינה מלאכותית היא איום או תועלת לחברה?</span></div>
+      <div class="tip-card orange">📱 Has social media done more harm than good to human relationships?<span class="he-inline">האם רשתות חברתיות הזיקו יותר משהועילו ליחסים אנושיים?</span></div>
+      <div class="tip-card blue">🌍 Should environmental education be compulsory in all schools?<span class="he-inline">האם חינוך סביבתי צריך להיות חובה בכל בתי הספר?</span></div>
+      <div class="tip-card green">🎓 Is a university degree still necessary for success in the modern world?<span class="he-inline">האם תואר אקדמי עדיין הכרחי להצלחה בעולם המודרני?</span></div>
+    </div>
+    <div class="task-hint">
+      💡 Structure: Intro (hook + thesis using "Although many people believe..., it is, in my opinion...") → Body §1 ("First and foremost...") → Body §2 ("Another point...") → Counter-argument ("Opponents may argue... however...") → Conclusion ("To sum up, as I have mentioned above, I am totally convinced...")
+      <span class="he">מבנה: פתיחה + טזה → גוף 1 → גוף 2 → טיעון נגד + הפרכה → מסקנה</span>
+    </div>
+    <div class="word-bank" style="margin-bottom:10px;">
+      <span class="word-chip" onclick="insertWord(this,'task2')">Although many people believe that..., it is, in my opinion, a misconception.</span>
+      <span class="word-chip" onclick="insertWord(this,'task2')">First and foremost, it is important to state that</span>
+      <span class="word-chip" onclick="insertWord(this,'task2')">Research has shown that</span>
+      <span class="word-chip" onclick="insertWord(this,'task2')">Another point that should be taken into consideration is</span>
+      <span class="word-chip" onclick="insertWord(this,'task2')">Opponents of this view may argue that</span>
+      <span class="word-chip" onclick="insertWord(this,'task2')">Nevertheless,</span>
+      <span class="word-chip" onclick="insertWord(this,'task2')">To sum up, as I have mentioned above, I am totally convinced that</span>
+    </div>
+    <textarea id="task2" placeholder="Write your argumentative essay here... (aim for 150–200 words)" oninput="countWords('task2','counter2')"></textarea>
+    <div class="word-counter" id="counter2"><span class="count-under">0 words</span></div>
+    <button class="check-btn blue-btn" onclick="checkTask('task2','fb2','argumentative')">✅ Check my text</button>
+    <div class="feedback-box" id="fb2"></div>
+  </div>
+
+  <!-- TASK 3 - EXTENSION -->
+  <div class="practice-task" style="background: linear-gradient(135deg,#fef3f3,#fde8e8); border-color:#f1948a;">
+    <div class="task-number" style="color:#c0392b;">3</div>
+    <div class="task-prompt">
+      🌟 <strong>Exam-Level Task <span class="extension-badge">Full Length</span></strong><br>
+      <span style="font-weight:600;">Write a full argumentative essay (200–250 words) on this topic: <em>"It is a commonly held belief that technology brings people together. Discuss."</em></span>
+      <span class="he">כתבו חיבור טיעוני מלא (200–250 מילים) על הנושא.</span>
+    </div>
+    <div class="task-hint">
+      💡 This is a full exam-level task. Use at least: one opening phrase, two body connectors, one counter-argument, and one concluding phrase from the Connectors tab.
+      <span class="he">זוהי משימה ברמת הבגרות. השתמשו בלפחות: ביטוי פתיחה אחד, שני מחברי גוף, טיעון נגד אחד, וביטוי סיכום אחד מלשונית המחברים.</span>
+    </div>
+    <textarea id="task3" placeholder="Write your full essay here... (aim for 200–250 words)" oninput="countWords('task3','counter3')" style="min-height:220px;"></textarea>
+    <div class="word-counter" id="counter3"><span class="count-under">0 words</span></div>
+    <button class="check-btn" style="background:#c0392b; color:white;" onclick="checkTask('task3','fb3','extension')">✅ Check my text</button>
+    <div class="feedback-box" id="fb3"></div>
+  </div>
+
+</div>
+
+<!-- ══════════════ RUBRIC ══════════════ -->
+<div id="rubric" class="section">
+
+  <div class="card">
+    <div class="card-title" style="color:#2c3e50">
+      <div class="emoji-badge">📊</div>
+      How Will Your Writing Be Graded?
+    </div>
+    <p style="line-height:1.8; margin-bottom:8px; font-size:1.02rem;">
+      This rubric is based on the <strong>Israeli Ministry of Education</strong> guidelines for English in upper secondary school (grades 10–12), aligned with the <strong>English Bagrut Curriculum</strong> and CEFR B2 standards for extended writing tasks.
+      <span class="he">הרובריקה מבוססת על הנחיות <strong>משרד החינוך הישראלי</strong> לאנגלית בחטיבה העליונה (כיתות י׳–י"ב), בהתאם ל<strong>תוכנית הבגרות</strong> ותקני CEFR B2 לכתיבה מורחבת.</span>
+    </p>
+    <div style="background:#eaf2fb; border-radius:10px; padding:12px 16px; font-size:0.88rem; font-weight:600; border:2px solid #aed6f1;">
+      📌 At this level, <strong>Task Achievement</strong> and <strong>Coherence & Cohesion</strong> carry the most weight. Length below 120 words will significantly affect your score.
+      <span class="he">ברמה זו, <strong>ביצוע המשימה</strong> ו<strong>קוהרנטיות ולכידות</strong> נושאים את המשקל הרב ביותר. טקסט קצר מ-120 מילים יפגע משמעותית בציון.</span>
+    </div>
+  </div>
+
+  <div class="card" style="overflow-x:auto;">
+    <table class="rubric-table">
+      <thead>
+        <tr>
+          <th style="min-width:140px;">Criterion<br><span style="font-weight:400; font-size:0.78rem; direction:rtl;">קריטריון</span></th>
+          <th>3 — Excellent<br><span style="font-weight:400; font-size:0.78rem;">מצוין</span></th>
+          <th>2 — Good<br><span style="font-weight:400; font-size:0.78rem;">טוב</span></th>
+          <th>1 — Basic<br><span style="font-weight:400; font-size:0.78rem;">בסיסי</span></th>
+          <th>0 — Needs Work<br><span style="font-weight:400; font-size:0.78rem;">דורש שיפור</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><div class="criterion-name">📋 Task Achievement</div><small>Did you fully address the task at the required level?</small><span class="he-inline">ביצוע המשימה ברמה הנדרשת</span></td>
+          <td><span class="score-3">Fully and insightfully addresses the task. Maintains focus throughout. Ideas are developed, not just listed.</span><span class="he-inline">ביצוע מלא ומעמיק. שמירה על מיקוד. רעיונות מפותחים.</span></td>
+          <td><span class="score-2">Mostly on task. Ideas are present and mostly developed. Minor gaps.</span><span class="he-inline">בעיקר בנושא. רעיונות קיימים ומפותחים ברובם.</span></td>
+          <td><span class="score-1">Partially on task. Ideas are mentioned but not developed. Some sections off-topic.</span><span class="he-inline">חלקית בנושא. רעיונות מוזכרים אך לא מפותחים.</span></td>
+          <td><span class="score-0">Fails to address the task. Very few relevant ideas.</span><span class="he-inline">לא עונה על המשימה. מעט רעיונות רלוונטיים.</span></td>
+        </tr>
+        <tr>
+          <td><div class="criterion-name">📐 Coherence & Cohesion</div><small>Is the essay logically organised and well-connected?</small><span class="he-inline">קוהרנטיות, לכידות ומבנה</span></td>
+          <td><span class="score-3">Clear multi-paragraph structure. Effective use of topic sentences and concluding phrases. Connectors used accurately and varied.</span><span class="he-inline">מבנה רב-פסקאי ברור. שימוש יעיל במשפטי נושא ומחברים מגוונים.</span></td>
+          <td><span class="score-2">Generally organised. Connectors present but sometimes mechanical or limited.</span><span class="he-inline">מאורגן בדרך כלל. מחברים קיימים אך לפעמים מכניים.</span></td>
+          <td><span class="score-1">Some structure, but paragraphing is weak or missing. Few connectors.</span><span class="he-inline">מבנה חלקי, חלוקה לפסקאות חלשה. מעט מחברים.</span></td>
+          <td><span class="score-0">No clear structure. No connectors. Random sentences.</span><span class="he-inline">אין מבנה. אין מחברים. משפטים אקראיים.</span></td>
+        </tr>
+        <tr>
+          <td><div class="criterion-name">💡 Content & Development</div><small>Depth, originality, and use of evidence</small><span class="he-inline">עומק, מקוריות, שימוש בראיות</span></td>
+          <td><span class="score-3">Rich, original ideas. Supported by evidence, examples, or reasoning. Counter-argument included (argumentative).</span><span class="he-inline">רעיונות עשירים ומקוריים. נתמכים בראיות. טיעון נגד כלול.</span></td>
+          <td><span class="score-2">Ideas are relevant and mostly supported. Some development but lacks depth.</span><span class="he-inline">רעיונות רלוונטיים ונתמכים ברובם. חסר עומק.</span></td>
+          <td><span class="score-1">Basic ideas. Little development or support. No counter-argument.</span><span class="he-inline">רעיונות בסיסיים. מעט פיתוח. אין טיעון נגד.</span></td>
+          <td><span class="score-0">Almost no content. Ideas missing or irrelevant.</span><span class="he-inline">כמעט אין תוכן. רעיונות חסרים או לא רלוונטיים.</span></td>
+        </tr>
+        <tr>
+          <td><div class="criterion-name">📚 Vocabulary & Register</div><small>Range, accuracy, and appropriateness of language</small><span class="he-inline">טווח, דיוק, ורמת השפה</span></td>
+          <td><span class="score-3">Wide range of vocabulary. Academic register maintained. Precise word choices (e.g. "eroding" not "making worse"). Figurative language used (descriptive).</span><span class="he-inline">מגוון אוצר מילים רחב. רמה אקדמית. בחירות מילים מדויקות.</span></td>
+          <td><span class="score-2">Adequate vocabulary. Mostly appropriate register. Some good word choices alongside simple ones.</span><span class="he-inline">אוצר מילים מספיק. רמה בדרך כלל מתאימה.</span></td>
+          <td><span class="score-1">Limited vocabulary. Relies on simple or repeated words. Register inconsistent.</span><span class="he-inline">אוצר מילים מוגבל. מילים פשוטות וחוזרות.</span></td>
+          <td><span class="score-0">Very limited vocabulary. Inappropriate register throughout.</span><span class="he-inline">אוצר מילים דל מאוד. רמה לא מתאימה לאורך כל הטקסט.</span></td>
+        </tr>
+        <tr>
+          <td><div class="criterion-name">✍️ Language Accuracy</div><small>Grammar, spelling, punctuation, sentence variety</small><span class="he-inline">דקדוק, כתיב, פיסוק, מגוון משפטים</span></td>
+          <td><span class="score-3">High accuracy. Varied sentence structures (complex + simple). Errors are minor and do not impede meaning.</span><span class="he-inline">דיוק גבוה. מגוון מבני משפטים. שגיאות קטנות בלבד.</span></td>
+          <td><span class="score-2">Mostly accurate. Some recurring errors but meaning is clear throughout.</span><span class="he-inline">בעיקר מדויק. שגיאות חוזרות אך המשמעות ברורה.</span></td>
+          <td><span class="score-1">Frequent errors that sometimes affect clarity. Limited sentence variety.</span><span class="he-inline">שגיאות תכופות שפוגמות לפעמים בבהירות.</span></td>
+          <td><span class="score-0">Pervasive errors. Very difficult to understand.</span><span class="he-inline">שגיאות רבות ומפושטות. קשה מאוד להבין.</span></td>
+        </tr>
+        <tr>
+          <td><div class="criterion-name">📏 Length & Effort</div><small>Is the required length met?</small><span class="he-inline">עמידה בדרישת האורך</span></td>
+          <td><span class="score-3">150–220 words — full and well-developed.</span><span class="he-inline">150–220 מילים — מלא ומפותח.</span></td>
+          <td><span class="score-2">120–149 words — mostly there but slightly underdeveloped.</span><span class="he-inline">120–149 מילים — קרוב אך קצת לא מפותח.</span></td>
+          <td><span class="score-1">80–119 words — clearly below the requirement.</span><span class="he-inline">80–119 מילים — מתחת לדרישה.</span></td>
+          <td><span class="score-0">Under 80 words — too short to properly assess.</span><span class="he-inline">מתחת ל-80 מילים — קצר מדי להערכה ראויה.</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title" style="color:#2c3e50">
+      <div class="emoji-badge">🧮</div>
+      Grade Calculator
+    </div>
+    <p style="margin-bottom:16px; line-height:1.7;">Select your score for each criterion to see your estimated grade:
+    <span class="he">בחרו ציון לכל קריטריון וראו את הציון המשוער שלכם:</span></p>
+    <div id="grade-criteria"></div>
+    <div style="margin-top:20px; padding:20px; background:linear-gradient(135deg,#1a1a2e,#0f3460); border-radius:14px; text-align:center; color:white;">
+      <div style="font-size:0.9rem; font-weight:700; margin-bottom:6px; opacity:0.85;">Your Estimated Grade | הציון המשוער שלך</div>
+      <div id="grade-result" style="font-family:'Fredoka One',cursive; font-size:3rem;">—</div>
+      <div id="grade-label" style="font-size:1rem; font-weight:700; margin-top:4px; opacity:0.9;"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title" style="color:#27ae60">
+      <div class="emoji-badge">✅</div>
+      Before You Hand In — Senior Self-Check!
+    </div>
+    <p style="margin-bottom:12px; line-height:1.7; font-size:0.95rem;">סמנו כל פריט לפני הגשה ✅
+    <span style="color:#7f8c8d; font-size:0.88rem;"> | Check each item before submitting!</span></p>
+    <div id="checklist-items"></div>
+    <div id="checklist-result" style="margin-top:14px; font-weight:700; font-size:1rem; display:none;"></div>
+  </div>
+
+</div>
+
+<!-- ══════════════ AI GRADER ══════════════ -->
+<div id="aigrade" class="section">
+
+  <div class="card" id="api-key-card" style="border:2px solid #f39c12; background:linear-gradient(135deg,#fffbf0,#fef5e7);">
+    <div class="card-title" style="color:#e67e22; font-size:1.2rem;">
+      <div class="emoji-badge">🔑</div>
+      Enter the Class API Key | הכניסו את מפתח ה-API של הכיתה
+    </div>
+    <p style="line-height:1.7; margin-bottom:10px; font-size:0.95rem;">
+      Your teacher gave you a key that looks like this: <strong style="font-family:monospace; background:#f8f9fa; padding:2px 8px; border-radius:4px;">AIzaSy...</strong>
+    </p>
+    <span class="he" style="margin-bottom:14px; display:block;">המורה נתן לכם מפתח — הכניסו אותו כאן פעם אחת.</span>
+    <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+      <input type="password" id="api-key-input" placeholder="Paste your key here..."
+        style="flex:1; min-width:200px; padding:11px 16px; border:2px solid #f39c12; border-radius:50px; font-family:'Nunito',sans-serif; font-size:0.95rem; outline:none;"
+        onkeydown="if(event.key==='Enter') saveKey()">
+      <button onclick="saveKey()"
+        style="padding:11px 24px; background:#e67e22; color:white; border:none; border-radius:50px; font-family:'Nunito',sans-serif; font-weight:800; font-size:0.95rem; cursor:pointer; white-space:nowrap;">
+        ✅ Save Key | שמור
+      </button>
+    </div>
+    <div id="key-status" style="margin-top:10px; font-size:0.88rem; font-weight:700;"></div>
+    <p style="margin-top:12px; font-size:0.78rem; color:#95a5a6; line-height:1.6;">
+      🔒 Saved only in your browser for this session. | נשמר רק בדפדפן שלכם לסשן זה.
+    </p>
+  </div>
+
+  <div id="grader-main" style="display:none;">
+    <div class="card">
+      <div class="card-title" style="color:#0f3460">
+        <div class="emoji-badge">🤖</div>
+        AI Writing Grader — Senior Level Feedback
+      </div>
+      <p style="line-height:1.8; margin-bottom:6px; font-size:1.02rem;">
+        Write your essay below and the AI will grade it according to the <strong>6 Bagrut-level rubric criteria</strong> — with detailed academic feedback!
+      </p>
+      <span class="he">כתבו את החיבור שלכם למטה וה-AI יבדוק אותו לפי <strong>6 קריטריוני הבגרות</strong> — עם משוב אקדמי מפורט!</span>
+
+      <div id="step-type" style="margin-top:16px;">
+        <div style="font-weight:800; font-size:0.95rem; margin-bottom:10px;">
+          Step 1 — What kind of text? | שלב 1 — איזה סוג טקסט?
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button onclick="setType('descriptive')" id="btn-desc"
+            style="padding:11px 24px; border-radius:50px; border:2px solid #27ae60; background:#eafaf1; color:#27ae60; font-weight:800; cursor:pointer; font-size:0.95rem; transition:all 0.2s;">
+            🖼️ Descriptive | תיאורי
+          </button>
+          <button onclick="setType('argumentative')" id="btn-arg"
+            style="padding:11px 24px; border-radius:50px; border:2px solid #8e44ad; background:#f5eef8; color:#8e44ad; font-weight:800; cursor:pointer; font-size:0.9rem; transition:all 0.2s;">
+            💬 Argumentative | טיעוני
+          </button>
+        </div>
+      </div>
+
+      <div id="step-topic" style="display:none; margin-top:20px;">
+        <div style="font-weight:800; font-size:0.95rem; margin-bottom:10px;">
+          Step 2 — Choose a topic: | שלב 2 — בחרו נושא:
+        </div>
+        <div id="topic-buttons" style="display:flex; flex-direction:column; gap:9px;"></div>
+        <div id="topic-chosen" style="margin-top:10px; font-size:0.88rem; color:#7f8c8d; font-weight:600;"></div>
+      </div>
+
+      <div id="step-write" style="display:none; margin-top:20px;">
+        <div id="topic-reminder" style="padding:12px 16px; border-radius:10px; margin-bottom:14px; font-weight:700; font-size:0.95rem;"></div>
+        <label style="font-weight:800; font-size:1rem; display:block; margin-bottom:8px;">
+          Step 3 — Write your essay! | שלב 3 — כתבו את החיבור! ✍️
+        </label>
+        <textarea id="ai-input" placeholder="Write your essay here (150+ words)... | כתבו את החיבור שלכם כאן (150+ מילים)..."
+          oninput="countWords('ai-input','ai-counter')"
+          style="min-height:220px; width:100%; border:2px solid #d5d8dc; border-radius:10px; padding:14px; font-family:'Nunito',sans-serif; font-size:0.97rem; line-height:1.7; resize:vertical;"></textarea>
+        <div class="word-counter" id="ai-counter" style="text-align:right; font-size:0.82rem; margin-top:6px; font-weight:700;"><span class="count-under">0 words</span></div>
+      </div>
+
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:14px; align-items:center;">
+        <button onclick="gradeWithAI()" id="grade-btn"
+          style="padding:13px 30px; background:linear-gradient(135deg,#1a1a2e,#0f3460); color:white; border:none; border-radius:50px; font-family:'Nunito',sans-serif; font-weight:800; font-size:1rem; cursor:pointer; transition:all 0.25s;">
+          🤖 Grade My Essay! | בדקו את החיבור שלי!
+        </button>
+        <button onclick="clearKey()"
+          style="padding:11px 18px; background:white; border:2px solid #bdc3c7; color:#7f8c8d; border-radius:50px; font-family:'Nunito',sans-serif; font-weight:700; font-size:0.85rem; cursor:pointer;">
+          🔑 Change key | החלף מפתח
+        </button>
+      </div>
+    </div>
+
+    <div id="ai-loading" style="display:none;">
+      <div class="card" style="text-align:center; padding:36px;">
+        <div style="font-size:2.5rem; margin-bottom:12px; animation: spin 1.5s linear infinite; display:inline-block;">⚙️</div>
+        <div style="font-family:'Fredoka One',cursive; font-size:1.3rem; color:#0f3460; margin-bottom:6px;">Grading your essay...</div>
+        <div style="direction:rtl; color:#7f8c8d; font-size:0.9rem;">בודק את החיבור שלך לפי רובריקת הבגרות...</div>
+      </div>
+    </div>
+
+    <div id="ai-results" style="display:none;"></div>
+  </div>
+</div>
+
+<style>
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.score-bar-wrap { background:#e8e8e8; border-radius:50px; height:12px; flex:1; }
+.score-bar-fill { height:12px; border-radius:50px; transition: width 0.8s ease; }
+.ai-score-row { display:flex; align-items:center; gap:12px; margin-bottom:14px; flex-wrap:wrap; }
+.ai-score-label { min-width:200px; font-weight:700; font-size:0.9rem; }
+.ai-score-num { font-family:'Fredoka One',cursive; font-size:1.3rem; min-width:36px; text-align:center; }
+#btn-desc.selected, #btn-arg.selected { transform:scale(1.05); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+</style>
+
+<script>
+// ── Tab navigation
+function showTab(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.tab-btn').forEach(b => {
+    if(b.getAttribute('onclick').includes(id)) b.classList.add('active');
+  });
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+// ── Accordion
+function toggleAcc(header) {
+  const body = header.nextElementSibling;
+  header.classList.toggle('open');
+  body.classList.toggle('open');
+}
+
+// ── Word chips
+function insertWord(chip, textareaId) {
+  const ta = document.getElementById(textareaId);
+  const word = chip.textContent + ' ';
+  const pos = ta.selectionStart;
+  ta.value = ta.value.substring(0,pos) + word + ta.value.substring(pos);
+  ta.focus();
+  ta.selectionStart = ta.selectionEnd = pos + word.length;
+  chip.classList.add('used');
+  const cIdx = textareaId.slice(-1);
+  countWords(textareaId, 'counter' + (isNaN(cIdx) ? '' : cIdx));
+}
+
+// ── Word counter (adjusted for 150-word target)
+function countWords(taId, counterId) {
+  const text = document.getElementById(taId).value.trim();
+  const words = text === '' ? 0 : text.split(/\s+/).length;
+  const el = document.getElementById(counterId);
+  if (!el) return;
+  let cls, label;
+  if(words === 0) { cls = 'count-under'; label = '0 words'; }
+  else if(words < 80) { cls = 'count-under'; label = words + ' words — Keep going! 🖊️ | המשיכו לכתוב!'; }
+  else if(words < 130) { cls = 'count-close'; label = words + ' words — Getting there... aim for 150+ ✍️ | מתקדמים! שאפו ל-150+'; }
+  else if(words <= 220) { cls = 'count-ok'; label = words + ' words — Great length! ✅ | אורך מצוין!'; }
+  else if(words <= 260) { cls = 'count-ok'; label = words + ' words — Excellent! 🌟 | מצוין!'; }
+  else { cls = 'count-over'; label = words + ' words — Consider trimming ✂️ | שקלו לקצר'; }
+  el.innerHTML = '<span class="' + cls + '">' + label + '</span>';
+}
+
+// ── Check task feedback (updated for 150-word level)
+function checkTask(taId, fbId, type) {
+  const text = document.getElementById(taId).value.trim();
+  const words = text === '' ? 0 : text.split(/\s+/).length;
+  const fb = document.getElementById(fbId);
+  fb.className = 'feedback-box show';
+
+  if(words < 20) {
+    fb.className += ' warning';
+    fb.innerHTML = '⚠️ You haven\'t written enough yet! Aim for at least 150 words.<br><span style="direction:rtl;display:block;font-size:0.85rem;">עדיין לא כתבתם מספיק! שאפו ללפחות 150 מילים.</span>';
+    return;
+  }
+
+  let tips = [];
+  let score = 0;
+
+  if(words >= 130 && words <= 250) { score += 2; }
+  else if(words >= 80) { score++; tips.push('📏 Aim for 150–200 words to meet the requirement. | שאפו ל-150–200 מילים לעמידה בדרישה.'); }
+  else { tips.push('📏 Your text is too short. You need at least 150 words for this level. | הטקסט קצר מדי. צריך לפחות 150 מילים ברמה זו.'); }
+
+  // Check for advanced connectors
+  const openingConnectors = /although many people|it is a commonly held|when discussing|the phenomenon|recently, we have|there are some factors|nowadays many|is a controversial|the issue of/i.test(text);
+  if(openingConnectors) score++; else tips.push('🍞 Use a formal academic opener for your introduction (e.g. "Although many people believe..." or "When discussing the issue of..."). | השתמשו בפתיחה אקדמית פורמלית.');
+
+  const middleConnectors = /first and foremost|to begin with|another point|a further|it is a well-known fact|research has shown|studies have proved|on the one hand|opponents.*argue|proponents/i.test(text);
+  if(middleConnectors) score++; else tips.push('🥬 Add formal body connectors: "First and foremost..." / "Another point that should be taken into consideration..." | הוסיפו מחברי גוף פורמליים.');
+
+  const conclusion = /to conclude|to sum up|all in all|in conclusion|all things considered|bearing this in mind|never have i been|it is about time|considering everything/i.test(text);
+  if(conclusion) score++; else tips.push('🍞 End with a formal conclusion phrase: "To sum up, as I have mentioned above..." / "In conclusion, bearing this in mind..." | סיימו עם ביטוי סיכום פורמלי.');
+
+  if(type === 'argumentative') {
+    const counterArg = /opponents|proponents|however|nevertheless|despite|although.*one must|on the other hand/i.test(text);
+    if(counterArg) score++; else tips.push('⚖️ Include a counter-argument: "Opponents of this view may argue that... However..." | כללו טיעון נגד.');
+    const evidence = /research has shown|studies have proved|it is a well-known fact|for example|for instance|such as/i.test(text);
+    if(evidence) score++; else tips.push('📊 Support your arguments with evidence: "Research has shown..." / "Studies have proved..." | תמכו את הטיעונים בראיות.');
+  }
+
+  if(tips.length === 0) {
+    fb.className = 'feedback-box show success';
+    fb.innerHTML = '🎉 Excellent work! Your essay shows strong academic writing skills. Submit with confidence!<br><span style="direction:rtl;display:block;font-size:0.85rem;">עבודה מצוינת! החיבור שלכם מראה מיומנויות כתיבה אקדמיות חזקות. הגישו בביטחון!</span>';
+  } else {
+    fb.className = 'feedback-box show info';
+    fb.innerHTML = '👍 Good start! Here are areas to strengthen:<ul style="margin-top:8px; padding-left:20px;">' +
+      tips.map(t => '<li style="margin-bottom:5px;">' + t + '</li>').join('') + '</ul>';
+  }
+}
+
+// ── Grade calculator (Rubric tab)
+const criteria = [
+  { name: '📋 Task Achievement | ביצוע המשימה', key: 'task' },
+  { name: '📐 Coherence & Cohesion | קוהרנטיות ולכידות', key: 'structure' },
+  { name: '💡 Content & Development | תוכן ופיתוח', key: 'content' },
+  { name: '📚 Vocabulary & Register | אוצר מילים ורמת שפה', key: 'vocab' },
+  { name: '✍️ Language Accuracy | דיוק לשוני', key: 'lang' },
+  { name: '📏 Length & Effort | אורך ומאמץ', key: 'length' },
+];
+function buildGradeCalc() {
+  const el = document.getElementById('grade-criteria');
+  el.innerHTML = criteria.map(c =>
+    `<div style="display:flex; align-items:center; gap:12px; margin-bottom:12px; flex-wrap:wrap;">
+      <div style="min-width:240px; font-weight:700; font-size:0.92rem;">${c.name}</div>
+      <div style="display:flex; gap:8px;">
+        ${[0,1,2,3].map(n =>
+          `<button onclick="setScore('${c.key}',${n},this)"
+            style="width:40px;height:40px;border-radius:50%;border:2px solid #ddd;background:#f8f9fa;font-weight:800;cursor:pointer;transition:all 0.2s;"
+            data-key="${c.key}" data-val="${n}">${n}</button>`
+        ).join('')}
+      </div>
+    </div>`
+  ).join('');
+}
+const scores = {};
+function setScore(key, val, btn) {
+  scores[key] = val;
+  document.querySelectorAll('[data-key="'+key+'"]').forEach(b => {
+    b.style.background = '#f8f9fa';
+    b.style.color = '#2c3e50';
+    b.style.borderColor = '#ddd';
+  });
+  const colors = ['#e74c3c','#e67e22','#3498db','#2ecc71'];
+  btn.style.background = colors[val];
+  btn.style.color = 'white';
+  btn.style.borderColor = colors[val];
+  updateGrade();
+}
+function updateGrade() {
+  const vals = Object.values(scores);
+  if(vals.length < criteria.length) return;
+  const total = vals.reduce((a,b)=>a+b,0);
+  const max = criteria.length * 3;
+  const pct = Math.round((total / max) * 100);
+  document.getElementById('grade-result').textContent = pct;
+  let label = pct >= 90 ? '⭐ Outstanding! | מצוין!' : pct >= 75 ? '👍 Strong work! | עבודה חזקה!' : pct >= 55 ? '📖 Keep developing! | המשיכו לפתח!' : '💪 More practice needed! | נדרשת תרגול נוסף!';
+  document.getElementById('grade-label').textContent = label;
+}
+buildGradeCalc();
+
+// ── Self-check checklist (senior level)
+const checks = [
+  'My essay has at least 150 words | החיבור שלי בן לפחות 150 מילים',
+  'I have a clear introduction with a thesis statement | יש לי פתיחה ברורה עם הצהרת תזה',
+  'I used a formal academic opener (e.g. "Although many people believe...") | השתמשתי בפתיחה אקדמית פורמלית',
+  'I have at least two developed body paragraphs | יש לי לפחות שתי פסקאות גוף מפותחות',
+  'Each body paragraph has a topic sentence | לכל פסקת גוף יש משפט נושא',
+  'I used middle-paragraph connectors ("First and foremost..." / "Another point...") | השתמשתי במחברי גוף ("First and foremost..." / "Another point...")',
+  'I included evidence or examples to support my arguments | כללתי ראיות או דוגמאות לתמיכה בטיעונים',
+  'I included a counter-argument (argumentative) | כללתי טיעון נגד (בכתיבה טיעונית)',
+  'I have a formal concluding paragraph | יש לי פסקת סיכום פורמלית',
+  'I used a formal conclusion phrase ("To sum up..." / "In conclusion...") | השתמשתי בביטוי סיכום פורמלי',
+  'I used a varied range of vocabulary (no word overuse) | השתמשתי במגוון אוצר מילים (ללא חזרה על מילים)',
+  'I checked grammar, spelling, and punctuation | בדקתי דקדוק, כתיב ופיסוק',
+];
+function buildChecklist() {
+  const el = document.getElementById('checklist-items');
+  el.innerHTML = checks.map((c, i) =>
+    `<label style="display:flex; align-items:center; gap:12px; margin-bottom:10px; cursor:pointer; font-size:0.92rem; font-weight:600; padding:10px 14px; border-radius:10px; background:#f8f9fa; border:2px solid #dfe6e9; transition:background 0.2s;">
+      <input type="checkbox" onchange="updateChecklist()" style="width:20px; height:20px; cursor:pointer; accent-color:#2ecc71;">
+      ${c}
+    </label>`
+  ).join('');
+}
+function updateChecklist() {
+  const total = checks.length;
+  const checked = document.querySelectorAll('#checklist-items input:checked').length;
+  const res = document.getElementById('checklist-result');
+  res.style.display = 'block';
+  if(checked === total) {
+    res.style.color = '#1e8449';
+    res.innerHTML = '🎉 Perfect! All criteria met. Your essay is ready for the Bagrut! | מושלם! כל הקריטריונים מולאו. החיבור מוכן לבגרות!';
+  } else {
+    res.style.color = '#e67e22';
+    res.innerHTML = `✅ ${checked}/${total} done. ${total - checked} more to go! | עוד ${total - checked} פריטים לסמן!`;
+  }
+}
+buildChecklist();
+
+// ── API Key management
+let geminiKey = localStorage.getItem('gemini_key') || '';
+if (geminiKey) showGrader();
+
+function saveKey() {
+  const val = document.getElementById('api-key-input').value.trim();
+  if (!val || val.length < 20) {
+    document.getElementById('key-status').innerHTML = '<span style="color:#c0392b;">⚠️ The key looks too short. Please check it. | המפתח נראה קצר מדי.</span>';
+    return;
+  }
+  geminiKey = val;
+  try { localStorage.setItem('gemini_key', val); } catch(e) {}
+  showGrader();
+}
+
+function showGrader() {
+  document.getElementById('api-key-card').style.display = 'none';
+  document.getElementById('grader-main').style.display = 'block';
+}
+
+function clearKey() {
+  geminiKey = '';
+  try { localStorage.removeItem('gemini_key'); } catch(e) {}
+  document.getElementById('api-key-input').value = '';
+  document.getElementById('key-status').innerHTML = '';
+  document.getElementById('api-key-card').style.display = 'block';
+  document.getElementById('grader-main').style.display = 'none';
+  document.getElementById('ai-results').style.display = 'none';
+}
+
+// ── Topics per type (senior level)
+const topics = {
+  descriptive: [
+    { en: 'A place that has changed significantly over time — describe how it was and how it is now.', he: 'מקום שהשתנה משמעותית עם הזמן — תארו איך היה ואיך הוא עכשיו.' },
+    { en: 'A person whose influence on your thinking or character has been profound.', he: 'אדם שהשפעתו על חשיבתכם או אישיותכם הייתה עמוקה.' },
+    { en: 'A moment when you felt completely out of your comfort zone — describe the experience.', he: 'רגע שבו הרגשתם מחוץ לאזור הנוחות שלכם — תארו את החוויה.' },
+    { en: 'A social or urban phenomenon you have witnessed — describe it in detail.', he: 'תופעה חברתית או עירונית שהייתם עדים לה — תארו אותה בפירוט.' },
+    { en: 'A piece of art, music, or literature that left a deep impression on you.', he: 'יצירת אמנות, מוזיקה, או ספרות שהותירה בכם רושם עמוק.' },
+  ],
+  argumentative: [
+    { en: 'Is artificial intelligence a threat or a benefit to society?', he: 'האם בינה מלאכותית היא איום או תועלת לחברה?' },
+    { en: 'Has social media done more harm than good to human relationships?', he: 'האם רשתות חברתיות הזיקו יותר משהועילו ליחסים אנושיים?' },
+    { en: 'Should environmental education be compulsory in all schools?', he: 'האם חינוך סביבתי צריך להיות חובה בכל בתי הספר?' },
+    { en: 'Is a university degree still necessary for success in the modern world?', he: 'האם תואר אקדמי עדיין הכרחי להצלחה בעולם המודרני?' },
+    { en: 'It is a commonly held belief that technology brings people together. Discuss.', he: 'ישנה אמונה נפוצה שהטכנולוגיה מאחדת בני אדם. דונו בכך.' },
+  ]
+};
+
+let chosenType = '';
+let chosenTopic = '';
+
+function setType(t) {
+  chosenType = t;
+  chosenTopic = '';
+  document.getElementById('btn-desc').classList.toggle('selected', t === 'descriptive');
+  document.getElementById('btn-arg').classList.toggle('selected', t === 'argumentative');
+  const container = document.getElementById('topic-buttons');
+  const typeColor  = t === 'descriptive' ? '#27ae60' : '#8e44ad';
+  const typeBg     = t === 'descriptive' ? '#eafaf1' : '#f5eef8';
+  container.innerHTML = topics[t].map((tp, i) => `
+    <button onclick="setTopic(${i})" id="topic-btn-${i}"
+      style="text-align:left; padding:12px 18px; border-radius:12px; border:2px solid #dfe6e9;
+             background:#f8f9fa; font-family:'Nunito',sans-serif; font-weight:700;
+             font-size:0.92rem; cursor:pointer; transition:all 0.2s; line-height:1.5;"
+      data-color="${typeColor}" data-bg="${typeBg}">
+      <span style="font-size:1.1rem; margin-right:8px;">${['1️⃣','2️⃣','3️⃣','4️⃣','5️⃣'][i]}</span>
+      ${tp.en}<br>
+      <span style="font-size:0.82rem; color:#7f8c8d; direction:rtl; display:block; margin-top:3px;">${tp.he}</span>
+    </button>`
+  ).join('');
+  document.getElementById('step-topic').style.display = 'block';
+  document.getElementById('step-write').style.display  = 'none';
+  document.getElementById('topic-chosen').textContent  = '';
+  document.getElementById('ai-input') && (document.getElementById('ai-input').value = '');
+  document.getElementById('ai-counter').innerHTML = '<span class="count-under">0 words</span>';
+  document.getElementById('ai-results').style.display = 'none';
+}
+
+function setTopic(i) {
+  chosenTopic = topics[chosenType][i].en;
+  const typeColor = chosenType === 'descriptive' ? '#27ae60' : '#8e44ad';
+  const typeBg    = chosenType === 'descriptive' ? '#eafaf1' : '#f5eef8';
+  document.querySelectorAll('[id^="topic-btn-"]').forEach(b => {
+    b.style.background  = '#f8f9fa';
+    b.style.borderColor = '#dfe6e9';
+    b.style.color       = '#2c3e50';
+  });
+  const btn = document.getElementById('topic-btn-' + i);
+  btn.style.background  = typeBg;
+  btn.style.borderColor = typeColor;
+  btn.style.color       = typeColor;
+  document.getElementById('topic-chosen').textContent =
+    '✅ Topic chosen: ' + topics[chosenType][i].he;
+  const reminderEl = document.getElementById('topic-reminder');
+  reminderEl.style.background  = typeBg;
+  reminderEl.style.borderLeft  = '4px solid ' + typeColor;
+  reminderEl.style.color       = typeColor;
+  reminderEl.innerHTML =
+    (chosenType === 'descriptive' ? '🖼️ Describe: ' : '💬 Argue your position on: ') +
+    '<strong>' + topics[chosenType][i].en + '</strong>' +
+    '<br><span style="font-size:0.82rem; font-weight:600; direction:rtl; display:block; margin-top:4px; color:#555;">' +
+    topics[chosenType][i].he + '</span>';
+  document.getElementById('step-write').style.display = 'block';
+  document.getElementById('ai-results').style.display = 'none';
+  setTimeout(() => document.getElementById('step-write').scrollIntoView({ behavior:'smooth', block:'start' }), 100);
+}
+
+// ── Grade with Gemini
+async function gradeWithAI() {
+  const text = document.getElementById('ai-input').value.trim();
+  if (!text || text.split(/\s+/).length < 30) {
+    alert('Please write at least 30 words first! | כתבו לפחות 30 מילים!');
+    return;
+  }
+  if (!chosenType) { alert('Please choose a text type! | בחרו סוג טקסט!'); return; }
+  if (!chosenTopic) { alert('Please choose a topic! | בחרו נושא!'); return; }
+  if (!geminiKey) { clearKey(); return; }
+
+  document.getElementById('ai-loading').style.display = 'block';
+  document.getElementById('ai-results').style.display = 'none';
+  document.getElementById('grade-btn').disabled = true;
+
+  const typeLabel = chosenType === 'descriptive' ? 'descriptive (תיאורי)' : 'argumentative (טיעוני)';
+
+  const prompt = `You are an experienced English teacher in Israel grading an upper secondary school student (grades 11-12) writing task at Bagrut level.
+
+The student chose to write a ${typeLabel} essay on this topic: "${chosenTopic}"
+
+Grade the following student text using this Bagrut-level rubric (each criterion: 0–3 points):
+1. Task Achievement – Did the student fully and insightfully address the topic "${chosenTopic}" in a ${typeLabel} way? Are ideas developed (not just listed)?
+2. Coherence & Cohesion – Is there a clear multi-paragraph structure with topic sentences, academic opening/closing connectors, and logical flow?
+3. Content & Development – Are ideas original, well-supported by evidence/examples? (For argumentative: is there a counter-argument?)
+4. Vocabulary & Register – Is the vocabulary rich and varied? Is an academic register maintained? Are word choices precise?
+5. Language Accuracy – Grammar, spelling, punctuation, sentence variety. Are complex structures used?
+6. Length – Ideal is 150–220 words. Below 120 should receive 0–1.
+
+Student text:
+"""
+${text}
+"""
+
+Respond ONLY with a JSON object in this exact format, no preamble, no markdown:
+{"scores":{"task":0,"structure":0,"content":0,"vocabulary":0,"language":0,"length":0},"total":0,"percent":0,"grade_label":"Good","strengths":["strength 1","strength 2"],"improvements":["tip 1","tip 2"],"strengths_he":["חוזקה 1","חוזקה 2"],"improvements_he":["טיפ 1","טיפ 2"],"overall_comment":"comment in English","overall_comment_he":"הערה בעברית"}`;
+
+  try {
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${geminiKey}`;
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contents: [{ parts: [{ text: prompt }] }],
+        generationConfig: { temperature: 0.3, maxOutputTokens: 1200 }
+      })
+    });
+
+    if (response.status === 400 || response.status === 403) {
+      const errData = await response.json();
+      throw new Error('api_error:' + response.status + ':' + JSON.stringify(errData));
+    }
+
+    const data = await response.json();
+    if (!data.candidates || data.candidates.length === 0) {
+      throw new Error('no_candidates:' + JSON.stringify(data));
+    }
+    const raw = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+    const clean = raw.replace(/```json|```/g, '').trim();
+    const result = JSON.parse(clean);
+    showResults(result, text);
+
+  } catch(err) {
+    document.getElementById('ai-loading').style.display = 'none';
+    document.getElementById('grade-btn').disabled = false;
+    document.getElementById('ai-results').style.display = 'block';
+    const isKeyError = err.message === 'invalid_key' || err.message.includes('403');
+    const errorDetails = err.message.replace('api_error:','').replace('no_candidates:','');
+    document.getElementById('ai-results').innerHTML = `
+      <div class="card" style="border:2px solid #f1948a; background:#fdf2f2;">
+        <div style="font-weight:800; color:#c0392b; margin-bottom:8px;">
+          ${isKeyError ? '🔑 Invalid API key | מפתח שגוי' : '⚠️ Connection error | שגיאת חיבור'}
+        </div>
+        <div style="font-size:0.92rem; margin-bottom:10px;">
+          ${isKeyError
+            ? 'The key is incorrect. Ask your teacher. | המפתח שגוי. בקשו מהמורה.'
+            : 'Could not reach the AI. Please try again. | לא ניתן להתחבר. נסו שוב.'}
+        </div>
+        <div style="font-size:0.78rem; background:#fff; padding:10px; border-radius:8px; font-family:monospace; word-break:break-all; color:#555;">
+          🔍 Error details: ${errorDetails}
+        </div>
+        ${isKeyError ? '<button onclick="clearKey()" style="margin-top:10px; padding:9px 20px; background:#c0392b; color:white; border:none; border-radius:50px; font-family:Nunito,sans-serif; font-weight:800; cursor:pointer;">🔑 Enter new key</button>' : ''}
+      </div>`;
+    document.getElementById('ai-results').scrollIntoView({ behavior:'smooth', block:'start' });
+  }
+}
+
+function showResults(r, text) {
+  document.getElementById('ai-loading').style.display = 'none';
+  document.getElementById('grade-btn').disabled = false;
+
+  const criteriaInfo = [
+    { key:'task',       label:'📋 Task Achievement',          label_he:'ביצוע המשימה' },
+    { key:'structure',  label:'📐 Coherence & Cohesion',      label_he:'קוהרנטיות ולכידות' },
+    { key:'content',    label:'💡 Content & Development',     label_he:'תוכן ופיתוח' },
+    { key:'vocabulary', label:'📚 Vocabulary & Register',     label_he:'אוצר מילים ורמה' },
+    { key:'language',   label:'✍️ Language Accuracy',         label_he:'דיוק לשוני' },
+    { key:'length',     label:'📏 Length & Effort',           label_he:'אורך ומאמץ' },
+  ];
+
+  const barColors = { 3:'#2ecc71', 2:'#3498db', 1:'#e67e22', 0:'#e74c3c' };
+  const pct = r.percent ?? Math.round((r.total / 18) * 100);
+  const gradeEmoji = pct >= 85 ? '⭐' : pct >= 65 ? '👍' : pct >= 45 ? '📖' : '💪';
+
+  const barsHTML = criteriaInfo.map(c => {
+    const sc = r.scores[c.key] ?? 0;
+    return `
+      <div class="ai-score-row">
+        <div class="ai-score-label">${c.label}<br><span style="font-size:0.78rem;color:#7f8c8d;direction:rtl;">${c.label_he}</span></div>
+        <div class="score-bar-wrap"><div class="score-bar-fill" style="width:${(sc/3)*100}%; background:${barColors[sc]};"></div></div>
+        <div class="ai-score-num" style="color:${barColors[sc]};">${sc}/3</div>
+      </div>`;
+  }).join('');
+
+  const strengthsHTML = (r.strengths||[]).map((s,i) =>
+    `<li style="margin-bottom:8px;">${s}<br><span style="font-size:0.82rem;color:#27ae60;direction:rtl;">${(r.strengths_he||[])[i]||''}</span></li>`
+  ).join('');
+
+  const tipsHTML = (r.improvements||[]).map((s,i) =>
+    `<li style="margin-bottom:8px;">${s}<br><span style="font-size:0.82rem;color:#e67e22;direction:rtl;">${(r.improvements_he||[])[i]||''}</span></li>`
+  ).join('');
+
+  const wordCount = text.trim().split(/\s+/).length;
+
+  document.getElementById('ai-results').style.display = 'block';
+  document.getElementById('ai-results').innerHTML = `
+    <div class="card" style="background:linear-gradient(135deg,#1a1a2e,#0f3460); color:white; text-align:center; padding:32px;">
+      <div style="font-size:1rem; font-weight:700; opacity:0.85; margin-bottom:6px;">Your Grade | הציון שלך</div>
+      <div style="font-family:'Fredoka One',cursive; font-size:4rem; line-height:1;">${pct}</div>
+      <div style="font-size:1.1rem; font-weight:700; margin-top:8px; opacity:0.9;">${gradeEmoji} ${r.grade_label}</div>
+      <div style="font-size:0.85rem; opacity:0.75; margin-top:4px;">${r.total ?? '?'} / 18 points | נקודות</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title" style="color:#2c3e50; font-size:1.2rem;">
+        <div class="emoji-badge">📊</div> Score Breakdown | פירוט הציון
+      </div>
+      ${barsHTML}
+    </div>
+
+    <div class="card" style="background:linear-gradient(135deg,#eafaf1,#d5f5e3); border:2px solid #a9dfbf;">
+      <div style="font-weight:800; font-size:1rem; color:#1e8449; margin-bottom:10px;">💬 Teacher's Comment | הערת המורה</div>
+      <p style="line-height:1.8; font-size:0.97rem;">${r.overall_comment}</p>
+      <p style="line-height:1.8; font-size:0.92rem; direction:rtl; color:#27ae60; margin-top:8px; border-top:1px solid #a9dfbf; padding-top:8px;">${r.overall_comment_he}</p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:20px;">
+      <div class="card" style="background:#eafaf1; border:2px solid #a9dfbf;">
+        <div style="font-weight:800; color:#27ae60; margin-bottom:10px;">✅ What's working | מה עובד טוב</div>
+        <ul style="padding-left:18px; font-size:0.92rem; line-height:1.7;">${strengthsHTML}</ul>
+      </div>
+      <div class="card" style="background:#fef9e7; border:2px solid #f9e79f;">
+        <div style="font-weight:800; color:#d68910; margin-bottom:10px;">📈 How to improve | איך להשתפר</div>
+        <ul style="padding-left:18px; font-size:0.92rem; line-height:1.7;">${tipsHTML}</ul>
+      </div>
+    </div>
+
+    <div class="card" style="background:#f4f6f7; text-align:center; padding:16px;">
+      <span style="font-size:0.9rem; font-weight:700; color:#7f8c8d;">
+        📏 Word count: <strong style="color:#2c3e50;">${wordCount} words | מילים</strong>
+        ${wordCount < 150 ? '<span style="color:#e74c3c; margin-left:10px;">⚠️ Below 150 words</span>' : wordCount >= 150 ? '<span style="color:#27ae60; margin-left:10px;">✅ Meets requirement</span>' : ''}
+      </span>
+    </div>
+
+    <div style="text-align:center; margin-bottom:20px;">
+      <button onclick="resetGrader()" style="padding:12px 28px; background:white; border:2px solid #0f3460; color:#0f3460; border-radius:50px; font-family:'Nunito',sans-serif; font-weight:800; font-size:0.95rem; cursor:pointer;">
+        🔄 Grade another essay | בדיקת חיבור נוסף
+      </button>
+    </div>`;
+
+  document.getElementById('ai-results').scrollIntoView({ behavior:'smooth', block:'start' });
+}
+
+function resetGrader() {
+  document.getElementById('ai-input').value = '';
+  document.getElementById('ai-counter').innerHTML = '<span class="count-under">0 words</span>';
+  document.getElementById('ai-results').style.display = 'none';
+  document.getElementById('step-topic').style.display = 'none';
+  document.getElementById('step-write').style.display  = 'none';
+  chosenType  = '';
+  chosenTopic = '';
+  document.getElementById('btn-desc').classList.remove('selected');
+  document.getElementById('btn-arg').classList.remove('selected');
+  document.getElementById('topic-chosen').textContent = '';
+  window.scrollTo({ top: 0, behavior:'smooth' });
+}
+</script>
+
+</body>
+</html>

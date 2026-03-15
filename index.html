@@ -1580,7 +1580,7 @@ Respond ONLY with a JSON object in this exact format, no preamble, no markdown:
           generationConfig: { temperature: 0.3, maxOutputTokens: 1200 }
         })
       });
-      if (response.status === 404) { lastErr = `Model ${model} not found`; continue; }
+      if (response.status === 404 || response.status === 429) { lastErr = `Model ${model} unavailable (${response.status})`; continue; }
       break;
     } catch(e) { lastErr = e.message; }
   }
